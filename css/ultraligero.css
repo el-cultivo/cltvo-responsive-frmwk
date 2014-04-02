@@ -39,8 +39,15 @@ table {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
+body {
+  position: relative; }
+
+html, body {
+  height: 100%; }
+
 .row {
   border: thin solid #DDD;
+  overflow: hidden;
   width: 100%;
   max-width: 1024px;
   min-width: 320px;

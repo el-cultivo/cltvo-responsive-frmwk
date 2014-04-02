@@ -56,9 +56,19 @@ $cols: 12;
 	@include border-sizing(border-box);
 }
 
+body {
+  position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+
 .row {
 	border: thin solid #DDD;
 
+	overflow: hidden;
 	width: 100%;
 	max-width: $row-max-width;
 	min-width: $min-device-width;
@@ -82,10 +92,6 @@ $cols: 12;
 .column:first-child, .columns:first-child {
 	margin-left: 0;
 }
-
-// .row .one.columns {
-// 	width: 8.33%;
-// }
 
 .row {
 	@for $i from 1 through $cols{
