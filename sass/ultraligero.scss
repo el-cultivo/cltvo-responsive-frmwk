@@ -11,11 +11,42 @@
 
 @import "reset";
 
+$gutter: 15;
+
+$row-max-width: 1024px;
+$min-device-width: 320px;
+
+$base: 15;
+$base-px: 15px;
+$base-porcentaje: percentage($base-px / $row-max-width);
+$cols: 12;
+
+$break-small: 568px;
+$break-medium: 768px;
+$break-normal: 1024px;
+
+
 @mixin border-sizing($box) {
 	box-sizing: $box;
 		-webkit-box-sizing: $box;
 		-moz-box-sizing: $box;
 }
+
+@mixin respond-to($media) {
+	@if $media == iPhone {
+		@media only screen and (max-width: $break-small) { @content; }
+	}
+	@else if $media == iPadVer {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-medium - 1) { @content; }
+	}
+	@else if $media == iPadHor {
+		@media only screen and (min-width: $break-medium + 1) and (max-width: $break-normal - 1) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: $break-normal) { @content; }
+	}
+}
+
 
 @function columns($num){
     @return (oneCol() * $num) + ($base-porcentaje * ($num - 1)); // (One column * 'x') + (gutter * ('x' - 1)) = Column Width
@@ -28,19 +59,6 @@
 @function sinUnidad($num) {
     @return ($num / ($num * 0 + 1));
 }
-
-
-$gutter: 15;
-
-$row-max-width: 1024px;
-$min-device-width: 320px; 						// iPhone Portrait
-$tablet-device-width: 768px;					// iPad Portrait
-
-$base: 15;
-$base-px: 15px;
-$base-porcentaje: percentage($base-px / $row-max-width);
-$cols: 12;
-
 
 // Create class names from column count integers
 @function number-as-word($number){
@@ -87,6 +105,11 @@ html, body {
 
 	margin-left: $base-porcentaje;
 	float: left;
+
+	// @include respond-to(iPhone) { background-color: red;}
+	@include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
+	// @include respond-to(iPadHor) { background-color: green; }
+	// @include respond-to(desktop) { background-color: black; }
 }
 
 .column:first-child, .columns:first-child {
