@@ -46,7 +46,6 @@ html, body {
   height: 100%; }
 
 .row {
-  border: thin solid #DDD;
   overflow: hidden;
   width: 100%;
   max-width: 1024px;
@@ -59,14 +58,12 @@ html, body {
     padding-left: 0;
     padding-right: 0; }
 
+/* Las columnas */
 .column, .columns {
-  border: thin solid #998;
   margin-left: 1.46484%;
   float: left; }
-  @media only screen and (max-width: 768px) {
-    .column, .columns {
-      width: 100% !important;
-      margin-left: 0; } }
+  .column img, .columns img {
+    max-width: 100%; }
 
 .column:first-child, .columns:first-child {
   margin-left: 0; }
@@ -97,3 +94,29 @@ html, body {
   width: 91.5446%; }
 .row .twelve.columns {
   width: 100%; }
+
+.row .one.centered {
+  margin-left: 46.50472%; }
+.row .two.centered {
+  margin-left: 42.27702%; }
+.row .three.centered {
+  margin-left: 38.04932%; }
+.row .four.centered {
+  margin-left: 33.82161%; }
+.row .five.centered {
+  margin-left: 29.59391%; }
+.row .six.centered {
+  margin-left: 25.36621%; }
+.row .seven.centered {
+  margin-left: 21.13851%; }
+.row .eight.centered {
+  margin-left: 16.91081%; }
+.row .nine.centered {
+  margin-left: 12.68311%; }
+.row .ten.centered {
+  margin-left: 8.4554%; }
+.row .eleven.centered {
+  margin-left: 4.2277%; }
+
+.centrado {
+  text-align: center; }

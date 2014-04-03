@@ -11,6 +11,8 @@
 
 @import "reset";
 
+$border-debug: false;
+
 $gutter: 15;
 
 $row-max-width: 1024px;
@@ -20,10 +22,18 @@ $base: 15;
 $base-px: 15px;
 $base-porcentaje: percentage($base-px / $row-max-width);
 $cols: 12;
+$cada-col: (100% - ($base-porcentaje * ($cols - 1))) / $cols;
 
 $break-small: 568px;
 $break-medium: 768px;
 $break-normal: 1024px;
+
+$color-destacado: #009393;
+$color-destacado2: #005151;
+$color-fondo: #f5f3dc;
+$color-texto: #454550;
+$color-principal: #f65828;
+$color-claro: white;
 
 
 @mixin border-sizing($box) {
@@ -44,14 +54,16 @@ $break-normal: 1024px;
 	}
 }
 
-
+// Estilo de todas las columnas
 @function columns($num){
-    @return (oneCol() * $num) + ($base-porcentaje * ($num - 1)); // (One column * 'x') + (gutter * ('x' - 1)) = Column Width
+    @return ($cada-col * $num) + ($base-porcentaje * ($num - 1)); // (One column * 'x') + (gutter * ('x' - 1)) = Column Width
 }
 
-@function oneCol() {
-    @return (100% - ($base-porcentaje * ($cols - 1))) / $cols;
+// Calculate Centered Class Margins
+@function centered($num) {
+    @return 50% - ((($num * $cada-col) + (($num - 1) * $base-porcentaje)) / 2);
 }
+
 
 @function sinUnidad($num) {
     @return ($num / ($num * 0 + 1));
@@ -81,7 +93,7 @@ html, body {
 
 
 .row {
-	border: thin solid #DDD;
+	@if($border-debug){ border: thin solid #DDD; }
 
 	overflow: hidden;
 	width: 100%;
@@ -97,22 +109,32 @@ html, body {
 	}
 }
 
+/* Las columnas */
+
 .column, .columns {
-	border: thin solid #998;
+	@if($border-debug){ border: thin solid #998; }
 
 	margin-left: $base-porcentaje;
 	float: left;
 
+	img{max-width:100%;}
+
 	// @include respond-to(iPhone) { background-color: red;}
-	@include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
+	// @include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
 	// @include respond-to(iPadHor) { background-color: green; }
 	// @include respond-to(desktop) { background-color: black; }
 }
 
+// @include respond-to(iPadVer) {
+// 	.ipad-break{
+// 		width: 100% !important; margin-left: 0;
+// 	}
+// }
+
 .column:first-child, .columns:first-child {
 	margin-left: 0;
 }
-
+// Genera cada tamaño de columna
 .row {
 	@for $i from 1 through $cols{
 		@if $i == 1 {
@@ -124,4 +146,16 @@ html, body {
 			width: columns($i);
 		}
 	}
+}
+
+// Columnas centradas
+.row {
+	@for $i from 1 through $cols - 1 {
+		.#{number-as-word($i)}.centered {
+			margin-left: centered($i);
+		}
+	}
+}
+.centrado{
+	text-align: center;
 }
