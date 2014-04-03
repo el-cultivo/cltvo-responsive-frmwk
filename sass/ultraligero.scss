@@ -41,6 +41,9 @@ $color-texto: #454550;
 $color-principal: #f65828;
 $color-claro: white;
 
+$fuente-prin: Open, sans-serif;
+//$fuente-sec: "Times New Roman", Times, serif;
+
 /**
 * MIXINS
 * ------
@@ -61,6 +64,20 @@ $color-claro: white;
 	}
 	@else if $media == iPadHor {
 		@media only screen and (max-width: $break-normal) { @content; }
+	}
+}
+
+@mixin declara-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal, $font-stretch: normal) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('#{$font-filename}.eot');
+    	src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype'),
+         url('#{$font-filename}.woff') format('woff'),
+         url('#{$font-filename}.ttf') format('truetype'),
+         url('#{$font-filename}.svg##{$font-filename}') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-stretch: $font-stretch;
 	}
 }
 
@@ -112,11 +129,21 @@ $color-claro: white;
 
 html, body {height: 100%;}
 
-body {position: relative;}
+body {position: relative; font-family: $fuente-prin;}
 
 img {-ms-interpolation-mode: bicubic;}
 
 .centrado{ text-align: center; }
+
+/**
+* FUENTES
+* -------
+*/
+
+@include declara-font-face(Open, '../fonts/OpenSans-Regular-webfont');
+@include declara-font-face(Open, '../fonts/OpenSans-Bold-webfont', bold);
+@include declara-font-face(Open, '../fonts/OpenSans-Italic-webfont', normal, italic);	
+
 
 /**
 * LA RETÍCULA
@@ -133,6 +160,7 @@ img {-ms-interpolation-mode: bicubic;}
 	margin: 0 auto;
 	padding-left: $base-porcentaje;
 	padding-right: $base-porcentaje;
+	position: relative;
 	.row {
 		min-width: 0;
 		padding-left: 0;
@@ -147,6 +175,7 @@ img {-ms-interpolation-mode: bicubic;}
 
 	margin-left: $base-porcentaje;
 	float: left;
+	position: relative;
 
 	img{max-width:100%; height: auto;}
 
@@ -198,4 +227,32 @@ img {-ms-interpolation-mode: bicubic;}
 			}
 		}
 	}
+}
+
+/**
+* EL MENU
+* -----------
+*/
+.el-menu{
+	//ul { float: right; }
+	li { float: left; margin-left: $base-px;  }
+}
+
+
+/**
+* SECCIONES
+* -----------
+*/
+
+.introduccion{
+	background-color: $color-principal;
+}
+.consulta{
+	background-color: $color-claro;
+}
+.como-funciona{
+	background-color: $color-texto;
+}
+.contacto{
+	background-color: $color-principal;
 }
