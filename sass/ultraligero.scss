@@ -64,6 +64,15 @@ $color-claro: white;
     @return 50% - ((($num * $cada-col) + (($num - 1) * $base-porcentaje)) / 2);
 }
 
+@function push_x($num, $first-child: false) {
+	@if $first-child {
+		@return ($cada-col * $num) + ($base-porcentaje * $num) ;
+	}
+	@else {
+		@return ($cada-col * $num) + ($base-porcentaje * $num ) + $base-porcentaje;
+	}
+}
+
 
 @function sinUnidad($num) {
     @return ($num / ($num * 0 + 1));
@@ -89,6 +98,10 @@ body {
 
 html, body {
   height: 100%;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
 }
 
 
@@ -117,7 +130,7 @@ html, body {
 	margin-left: $base-porcentaje;
 	float: left;
 
-	img{max-width:100%;}
+	img{max-width:100%; height: auto;}
 
 	// @include respond-to(iPhone) { background-color: red;}
 	// @include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
@@ -156,6 +169,19 @@ html, body {
 		}
 	}
 }
+
+// Push
+.row {
+	@for $i from 1 through $cols - 1 {
+		.push_#{number-as-word($i)} {
+			margin-left: push_x($i);
+			&:first-child {
+				margin-left: push_x($i, true);
+			}
+		}
+	}
+}
+
 .centrado{
 	text-align: center;
 }
