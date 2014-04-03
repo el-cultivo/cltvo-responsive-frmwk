@@ -158,8 +158,8 @@ img {-ms-interpolation-mode: bicubic;}
 	max-width: $row-max-width;
 	min-width: $min-device-width;
 	margin: 0 auto;
-	padding-left: $base-porcentaje;
-	padding-right: $base-porcentaje;
+	padding-left: $base-px;
+	padding-right: $base-px;
 	position: relative;
 	.row {
 		min-width: 0;
