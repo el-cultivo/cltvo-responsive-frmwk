@@ -63,7 +63,7 @@ html, body {
   border: thin solid #998;
   margin-left: 1.46484%;
   float: left; }
-  @media only screen and (min-width: 569px) and (max-width: 767px) {
+  @media only screen and (max-width: 768px) {
     .column, .columns {
       width: 100% !important;
       margin-left: 0; } }
