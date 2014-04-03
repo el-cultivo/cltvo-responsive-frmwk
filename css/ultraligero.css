@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
 * Ultraligero Framework
 * ---------------------
@@ -34,20 +35,43 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/**
+* SET UP VARS
+* -----------
+*/
+/**
+* MIXINS
+* ------
+*/
+/**
+* FUNCTIONS
+* ---------
+*/
+/**
+* ESTILOS GLOBALES
+* ----------------
+*/
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-body {
-  position: relative; }
-
 html, body {
   height: 100%; }
+
+body {
+  position: relative; }
 
 img {
   -ms-interpolation-mode: bicubic; }
 
+.centrado {
+  text-align: center; }
+
+/**
+* LA RETÍCULA
+* -----------
+*/
 .row {
   overflow: hidden;
   width: 100%;
@@ -166,6 +190,3 @@ img {
   margin-left: 94.47428%; }
   .row .push_eleven:first-child {
     margin-left: 93.00944%; }
-
-.centrado {
-  text-align: center; }

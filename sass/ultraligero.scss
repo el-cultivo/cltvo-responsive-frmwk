@@ -11,6 +11,12 @@
 
 @import "reset";
 
+
+/**
+* SET UP VARS
+* -----------
+*/
+
 $border-debug: false;
 
 $gutter: 15;
@@ -35,6 +41,10 @@ $color-texto: #454550;
 $color-principal: #f65828;
 $color-claro: white;
 
+/**
+* MIXINS
+* ------
+*/
 
 @mixin border-sizing($box) {
 	box-sizing: $box;
@@ -53,6 +63,11 @@ $color-claro: white;
 		@media only screen and (max-width: $break-normal) { @content; }
 	}
 }
+
+/**
+* FUNCTIONS
+* ---------
+*/
 
 // Estilo de todas las columnas
 @function columns($num){
@@ -88,22 +103,25 @@ $color-claro: white;
   @return nth($w, $number);
 }
 
-*{
-	@include border-sizing(border-box);
-}
+/**
+* ESTILOS GLOBALES
+* ----------------
+*/
 
-body {
-  position: relative;
-}
+*{@include border-sizing(border-box);}
 
-html, body {
-  height: 100%;
-}
+html, body {height: 100%;}
 
-img {
-	-ms-interpolation-mode: bicubic;
-}
+body {position: relative;}
 
+img {-ms-interpolation-mode: bicubic;}
+
+.centrado{ text-align: center; }
+
+/**
+* LA RETÍCULA
+* -----------
+*/
 
 .row {
 	@if($border-debug){ border: thin solid #DDD; }
@@ -180,8 +198,4 @@ img {
 			}
 		}
 	}
-}
-
-.centrado{
-	text-align: center;
 }
