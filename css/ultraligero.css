@@ -48,28 +48,6 @@ table {
 * ---------
 */
 /**
-* ESTILOS GLOBALES
-* ----------------
-*/
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; }
-
-html, body {
-  height: 100%; }
-
-body {
-  position: relative;
-  font-family: Open, sans-serif; }
-
-img {
-  -ms-interpolation-mode: bicubic; }
-
-.centrado {
-  text-align: center; }
-
-/**
 * FUENTES
 * -------
 */
@@ -95,6 +73,31 @@ img {
   font-style: italic;
   font-stretch: normal; }
 /**
+* ESTILOS GLOBALES
+* ----------------
+*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  position: relative;
+  font-family: Open, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+.centrado {
+  text-align: center; }
+
+/**
 * LA RETÍCULA
 * -----------
 */
@@ -104,8 +107,8 @@ img {
   max-width: 1024px;
   min-width: 320px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 17px;
+  padding-right: 17px;
   position: relative; }
   .row .row {
     min-width: 0;
@@ -114,7 +117,7 @@ img {
 
 /* Las columnas */
 .column, .columns {
-  margin-left: 1.46484%;
+  margin-left: 1.66016%;
   float: left;
   position: relative; }
   .column img, .columns img {
@@ -125,114 +128,123 @@ img {
   margin-left: 0; }
 
 .row .one.column {
-  width: 6.99056%; }
+  width: 6.81152%; }
 .row .one.columns {
-  width: 6.99056%; }
+  width: 6.81152%; }
 .row .two.columns {
-  width: 15.44596%; }
+  width: 15.2832%; }
 .row .three.columns {
-  width: 23.90137%; }
+  width: 23.75488%; }
 .row .four.columns {
-  width: 32.35677%; }
+  width: 32.22656%; }
 .row .five.columns {
-  width: 40.81217%; }
+  width: 40.69824%; }
 .row .six.columns {
-  width: 49.26758%; }
+  width: 49.16992%; }
 .row .seven.columns {
-  width: 57.72298%; }
+  width: 57.6416%; }
 .row .eight.columns {
-  width: 66.17839%; }
+  width: 66.11328%; }
 .row .nine.columns {
-  width: 74.63379%; }
+  width: 74.58496%; }
 .row .ten.columns {
-  width: 83.08919%; }
+  width: 83.05664%; }
 .row .eleven.columns {
-  width: 91.5446%; }
+  width: 91.52832%; }
 .row .twelve.columns {
   width: 100%; }
 
 .row .one.centered {
-  margin-left: 46.50472%; }
+  margin-left: 46.59424%; }
 .row .two.centered {
-  margin-left: 42.27702%; }
+  margin-left: 42.3584%; }
 .row .three.centered {
-  margin-left: 38.04932%; }
+  margin-left: 38.12256%; }
 .row .four.centered {
-  margin-left: 33.82161%; }
+  margin-left: 33.88672%; }
 .row .five.centered {
-  margin-left: 29.59391%; }
+  margin-left: 29.65088%; }
 .row .six.centered {
-  margin-left: 25.36621%; }
+  margin-left: 25.41504%; }
 .row .seven.centered {
-  margin-left: 21.13851%; }
+  margin-left: 21.1792%; }
 .row .eight.centered {
-  margin-left: 16.91081%; }
+  margin-left: 16.94336%; }
 .row .nine.centered {
-  margin-left: 12.68311%; }
+  margin-left: 12.70752%; }
 .row .ten.centered {
-  margin-left: 8.4554%; }
+  margin-left: 8.47168%; }
 .row .eleven.centered {
-  margin-left: 4.2277%; }
+  margin-left: 4.23584%; }
 
 .row .push_one {
-  margin-left: 9.92025%; }
+  margin-left: 10.13184%; }
   .row .push_one:first-child {
-    margin-left: 8.4554%; }
+    margin-left: 8.47168%; }
 .row .push_two {
-  margin-left: 18.37565%; }
+  margin-left: 18.60352%; }
   .row .push_two:first-child {
-    margin-left: 16.91081%; }
+    margin-left: 16.94336%; }
 .row .push_three {
-  margin-left: 26.83105%; }
+  margin-left: 27.0752%; }
   .row .push_three:first-child {
-    margin-left: 25.36621%; }
+    margin-left: 25.41504%; }
 .row .push_four {
-  margin-left: 35.28646%; }
+  margin-left: 35.54688%; }
   .row .push_four:first-child {
-    margin-left: 33.82161%; }
+    margin-left: 33.88672%; }
 .row .push_five {
-  margin-left: 43.74186%; }
+  margin-left: 44.01855%; }
   .row .push_five:first-child {
-    margin-left: 42.27702%; }
+    margin-left: 42.3584%; }
 .row .push_six {
-  margin-left: 52.19727%; }
+  margin-left: 52.49023%; }
   .row .push_six:first-child {
-    margin-left: 50.73242%; }
+    margin-left: 50.83008%; }
 .row .push_seven {
-  margin-left: 60.65267%; }
+  margin-left: 60.96191%; }
   .row .push_seven:first-child {
-    margin-left: 59.18783%; }
+    margin-left: 59.30176%; }
 .row .push_eight {
-  margin-left: 69.10807%; }
+  margin-left: 69.43359%; }
   .row .push_eight:first-child {
-    margin-left: 67.64323%; }
+    margin-left: 67.77344%; }
 .row .push_nine {
-  margin-left: 77.56348%; }
+  margin-left: 77.90527%; }
   .row .push_nine:first-child {
-    margin-left: 76.09863%; }
+    margin-left: 76.24512%; }
 .row .push_ten {
-  margin-left: 86.01888%; }
+  margin-left: 86.37695%; }
   .row .push_ten:first-child {
-    margin-left: 84.55404%; }
+    margin-left: 84.7168%; }
 .row .push_eleven {
-  margin-left: 94.47428%; }
+  margin-left: 94.84863%; }
   .row .push_eleven:first-child {
-    margin-left: 93.00944%; }
+    margin-left: 93.18848%; }
 
 /**
 * EL MENU
 * -----------
 */
+.el-menu ul {
+  float: right; }
 .el-menu li {
   float: left;
-  margin-left: 15px; }
+  margin-left: 34px; }
 
 /**
 * SECCIONES
 * -----------
 */
+.seccion {
+  padding-top: 1rem; }
+
 .introduccion {
-  background-color: #f65828; }
+  background-color: #f65828;
+  color: white; }
+  .introduccion h1 {
+    margin-top: 6.85359rem;
+    margin-bottom: 5.64406rem; }
 
 .consulta {
   background-color: white; }
@@ -242,3 +254,22 @@ img {
 
 .contacto {
   background-color: #f65828; }
+
+/**
+* TIPOGRAFÍA
+* ----------
+*/
+.tam-prin {
+  font-size: 3.48829rem;
+  line-height: 4.23582rem; }
+
+.tam-sec {
+  font-size: 2.15594rem;
+  line-height: 2.61794rem; }
+
+.tam-ter, .column, .columns {
+  font-size: 1.33247rem;
+  line-height: 2.15594rem; }
+  .tam-ter p, .column p, .columns p {
+    font-size: 1.33247rem;
+    line-height: 2.15594rem; }
