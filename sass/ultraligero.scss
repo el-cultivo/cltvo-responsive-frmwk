@@ -147,6 +147,8 @@ $fuente-prin: Open, sans-serif;
 
 *{@include border-sizing(border-box);}
 
+html{font-size: $base-px;}
+
 html, body {height: 100%;}
 
 body {
@@ -154,7 +156,7 @@ body {
 	font-family: $fuente-prin;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	font-size: $base-px;
+	// font-size: $base-px;
 }
 
 img {-ms-interpolation-mode: bicubic;}
@@ -250,8 +252,31 @@ img {-ms-interpolation-mode: bicubic;}
 * -----------
 */
 .el-menu{
+	position: fixed;
+	background-color: $color-claro;
+	width: 100%;
+	z-index: 1000;
+
+	height: tamano(6);
+	display: table;
+
 	ul { float: right; }
-	li { float: left; margin-left: $base-px *2;  }
+	li {
+		float: left;
+		margin-left: tamano(2);
+		a {
+			vertical-align: middle;
+			display: table-cell;
+			font-size: tamano(2);
+			height: tamano(6);
+		}
+	}
+
+	.logo{
+		vertical-align: middle;
+		display: table-cell;
+		height: tamano(6);
+	}
 }
 
 
@@ -261,18 +286,19 @@ img {-ms-interpolation-mode: bicubic;}
 */
 
 .seccion{
-	padding-top: tamano(2, rem);
+	padding-top: tamano(11);
+	padding-bottom: tamano(9);
 }
 .introduccion{
 	background-color: $color-principal;
 	color: $color-claro;
 	h1{
-		margin-top: tamano(10, rem);
-		margin-bottom: tamano(9, rem);
+		//margin-top: tamano(10);
+		margin-bottom: tamano(9);
 	}
 }
 .consulta{
-	background-color: $color-claro;
+	background-color: $color-fondo;
 }
 .como-funciona{
 	background-color: $color-texto;
@@ -288,20 +314,20 @@ img {-ms-interpolation-mode: bicubic;}
 */
 
 .tam-prin{ 
-	font-size: tamano(7, rem);
-	line-height: tamano(8, rem);
+	font-size: tamano(7);
+	line-height: tamano(8);
 }
 .tam-sec{
-	font-size: tamano(5, rem);
-	line-height: tamano(6, rem);
+	font-size: tamano(5);
+	line-height: tamano(6);
 }
 
-.tam-ter, .column, .columns{
-	font-size: tamano(3, rem);
-	line-height: tamano(5, rem);
+.tam-ter{
+	font-size: tamano(3);
+	line-height: tamano(5);
 	p{
-		font-size: tamano(3, rem);
-		line-height: tamano(5, rem);
+		font-size: tamano(3);
+		line-height: tamano(5);
 
 	}
 }
