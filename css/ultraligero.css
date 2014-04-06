@@ -80,6 +80,10 @@ table {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
+  *::selection {
+    background: #009393; }
+  *::-moz-selection {
+    background: #009393; }
 
 html {
   font-size: 17px; }
@@ -103,6 +107,20 @@ ol {
 ul {
   list-style: disc;
   margin-left: 1.1em; }
+
+input, textarea {
+  border: 2px solid white;
+  padding-right: .5em;
+  padding-left: .5em; }
+  input[type="submit"], textarea[type="submit"] {
+    cursor: pointer; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: #005151; }
 
 .centrado {
   text-align: center; }
@@ -278,9 +296,24 @@ ul {
 
 .como-funciona {
   background-color: #454550; }
+  .como-funciona .boton {
+    background-color: #009393; }
 
 .contacto {
   background-color: #f65828; }
+  .contacto .contacto-form input, .contacto .contacto-form textarea {
+    background-color: #f65828;
+    color: #454550; }
+    .contacto .contacto-form input[type="submit"], .contacto .contacto-form textarea[type="submit"] {
+      color: white; }
+    .contacto .contacto-form input::-webkit-input-placeholder, .contacto .contacto-form textarea::-webkit-input-placeholder {
+      color: white; }
+    .contacto .contacto-form input:-moz-placeholder, .contacto .contacto-form textarea:-moz-placeholder {
+      color: white; }
+    .contacto .contacto-form input::-moz-placeholder, .contacto .contacto-form textarea::-moz-placeholder {
+      color: white; }
+    .contacto .contacto-form input:-ms-input-placeholder, .contacto .contacto-form textarea:-ms-input-placeholder {
+      color: white; }
 
 /**
 * TIPOGRAFÍA
@@ -298,10 +331,14 @@ ul {
 .tam-ter {
   font-size: 22.652px;
   line-height: 36.651px; }
-  .tam-ter p, .tam-ter ul, .tam-ter ol, .tam-ter input, .tam-ter textarea {
+  .tam-ter p, .tam-ter ul, .tam-ter ol {
     font-size: 22.652px;
     line-height: 36.651px;
     margin-bottom: 36.651px; }
+  .tam-ter input, .tam-ter textarea {
+    font-size: 22.652px;
+    line-height: 36.651px;
+    margin-bottom: 14px; }
 
 .tam-cuat p {
   font-size: 17px;
@@ -312,3 +349,28 @@ ul {
   font-size: 14px;
   line-height: 17px;
   margin-bottom: 17px; }
+
+/**
+* BOTONES
+* ----------
+*/
+.boton {
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px 7px 14px;
+  font-size: 17px;
+  background-color: #f65828;
+  color: white;
+  text-align: center;
+  cursor: pointer; }
+  .boton.mediano {
+    padding: 14px 17px 14px 17px;
+    font-size: 22.652px; }
+  .boton.grande {
+    padding: 17px 22.652px 17px 22.652px;
+    font-size: 27.506px; }
+  .boton.redondeado {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px; }

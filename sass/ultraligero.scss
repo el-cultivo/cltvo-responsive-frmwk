@@ -94,6 +94,13 @@ $fuente-prin: Open, sans-serif;
 	}
 }
 
+@mixin border-radius( $radius ){
+	border-radius: $radius;
+		-moz-border-radius: $radius;
+		-webkit-border-radius: $radius;
+		-khtml-border-radius: $radius;
+}
+
 /**
 * FUNCTIONS
 * ---------
@@ -118,14 +125,16 @@ $fuente-prin: Open, sans-serif;
 	}
 }
 
-@function tamano($n, $unit:px){
+@function tamano($n, $unit:px, $division:false){
 	$tamano: nth($tamanos, $n);
+	@if( type-of($division) == number ){
+		$tamano: $tamano/2;
+	}
 	@if($unit == px){
 		@return $tamano + px;
 	}@else if($unit == rem){
 		@return $tamano / $base + rem;
-	}
-	
+	}	
 }
 
 @function sinUnidad($num) {
@@ -156,7 +165,11 @@ $fuente-prin: Open, sans-serif;
 * ----------------
 */
 
-*{@include border-sizing(border-box);}
+*{
+	@include border-sizing(border-box);
+	&::selection{ background: $color-destacado; }
+	&::-moz-selection{background: $color-destacado; }
+}
 
 html{font-size: $base-px;}
 
@@ -179,6 +192,20 @@ ol{
 ul{
 	list-style: disc;
 	margin-left: 1.1em;
+}
+input, textarea{
+	border: 2px solid $color-claro;
+	padding-right: .5em;
+	padding-left: .5em;
+	&[type="submit"]{cursor: pointer;}
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: $color-destacado2;
 }
 
 .centrado{ text-align: center; }
@@ -322,9 +349,23 @@ ul{
 }
 .como-funciona{
 	background-color: $color-texto;
+	.boton{
+		background-color: $color-destacado;
+	}
 }
 .contacto{
 	background-color: $color-principal;
+	.contacto-form{
+		input, textarea{
+			background-color: $color-principal;
+			color: $color-texto;
+			&[type="submit"]{ color: $color-claro;}
+			&::-webkit-input-placeholder { color: $color-claro;}
+			&:-moz-placeholder { color: $color-claro;}
+			&::-moz-placeholder { color: $color-claro;}
+			&:-ms-input-placeholder { color: $color-claro;}
+		}
+	}
 }
 
 
@@ -338,7 +379,8 @@ ul{
 
 .tam-ter{
 	@include tamano-fuente(3, 5, false);
-	p, ul, ol, input, textarea{ @include tamano-fuente(3, 5); }
+	p, ul, ol{ @include tamano-fuente(3, 5); }
+	input, textarea{@include tamano-fuente(3, 5, 1); }
 }
 .tam-cuat{
 	p{@include tamano-fuente(2, 5, 2);}
@@ -348,5 +390,22 @@ ul{
 	p, ul, ol{ @include tamano-fuente(1); }
 }
 
+/**
+* BOTONES
+* ----------
+*/
 
+.boton{
+	text-decoration: none;
+	display: inline-block;
+	padding: tamano(1, px, 2) tamano(1) tamano(1, px, 2) tamano(1);
+	font-size: tamano(2);
+	background-color: $color-principal;
+	color: $color-claro;
+	text-align: center;
+	cursor: pointer;
 
+	&.mediano{padding: tamano(1) tamano(2) tamano(1) tamano(2); font-size: tamano(3);}
+	&.grande{padding: tamano(2) tamano(3) tamano(2) tamano(3); font-size: tamano(4);}
+	&.redondeado{@include border-radius(4px);}
+}
