@@ -5,6 +5,10 @@
 *
 * Desarrollado por El Cultivo
 * http://elcultivo.mx
+*
+*
+*
+* Usar ese archivo para customizar estilos
 * 
 */
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
@@ -38,43 +42,19 @@ table {
 /**
 * SET UP VARS
 * -----------
+*
+* Antes de sobreescirbir, échale un ojo a este file
+* Algunos estilos son fácilmente configurables 
+* con sólo cambiando el valor de las variables en _config.scss
+* 
 */
 /**
-* MIXINS
-* ------
-*/
-/**
-* FUNCTIONS
-* ---------
-*/
-/**
-* FUENTES
-* -------
-*/
-@font-face {
-  font-family: "Open";
-  src: url("../fonts/OpenSans-Regular-webfont.eot");
-  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#../fonts/OpenSans-Regular-webfont") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Open";
-  src: url("../fonts/OpenSans-Bold-webfont.eot");
-  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#../fonts/OpenSans-Bold-webfont") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal; }
-@font-face {
-  font-family: "Open";
-  src: url("../fonts/OpenSans-Italic-webfont.eot");
-  src: url("../fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Italic-webfont.svg#../fonts/OpenSans-Italic-webfont") format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-stretch: normal; }
-/**
-* ESTILOS GLOBALES
-* ----------------
+* ESTILOS BÁSICOS 
+* ---------------
+*
+* Estilos básicos de ultraligero
+* Edítalos o sobreescríbelos
+* 
 */
 * {
   box-sizing: border-box;
@@ -122,8 +102,61 @@ button:focus {
   outline: none;
   border-color: #005151; }
 
+/**
+* CLASES GLOBALES 
+* ---------------
+*
+* Algunos elementos están pre-estilisados
+* Usa estas clases para esilizar menús, botones, etc
+* Edita o sobreescribe lo que no te guste
+* 
+*/
 .centrado {
   text-align: center; }
+
+.boton {
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px 7px 14px;
+  font-size: 17px;
+  background-color: #f65828;
+  color: white;
+  text-align: center;
+  cursor: pointer; }
+  .boton.mediano {
+    padding: 14px 17px 14px 17px;
+    font-size: 22.652px; }
+  .boton.grande {
+    padding: 17px 22.652px 17px 22.652px;
+    font-size: 27.506px; }
+  .boton.redondeado {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px; }
+
+.el-menu {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  height: 44.505px;
+  display: table; }
+  .el-menu ul {
+    float: right;
+    list-style-type: none; }
+  .el-menu li {
+    float: left;
+    margin-left: 17px; }
+    .el-menu li a {
+      vertical-align: middle;
+      display: table-cell;
+      font-size: 17px;
+      height: 44.505px; }
+  .el-menu .logo {
+    vertical-align: middle;
+    display: table-cell;
+    height: 44.505px; }
 
 /**
 * LA RETÍCULA
@@ -143,7 +176,6 @@ button:focus {
     padding-left: 0;
     padding-right: 0; }
 
-/* Las columnas */
 .column, .columns {
   margin-left: 1.66016%;
   float: left;
@@ -251,31 +283,64 @@ button:focus {
     margin-left: 93.18848%; }
 
 /**
-* EL MENU
-* -----------
+* FUENTES
+* -------
 */
-.el-menu {
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  z-index: 1000;
-  height: 44.505px;
-  display: table; }
-  .el-menu ul {
-    float: right;
-    list-style-type: none; }
-  .el-menu li {
-    float: left;
-    margin-left: 17px; }
-    .el-menu li a {
-      vertical-align: middle;
-      display: table-cell;
-      font-size: 17px;
-      height: 44.505px; }
-  .el-menu .logo {
-    vertical-align: middle;
-    display: table-cell;
-    height: 44.505px; }
+@font-face {
+  font-family: "Open";
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#../fonts/OpenSans-Regular-webfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
+  font-family: "Open";
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#../fonts/OpenSans-Bold-webfont") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal; }
+@font-face {
+  font-family: "Open";
+  src: url("../fonts/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Italic-webfont.svg#../fonts/OpenSans-Italic-webfont") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal; }
+/**
+* TIPOGRAFÍA
+* ----------
+*/
+.tam-prin {
+  font-size: 59.301px;
+  line-height: 72.009px;
+  margin-bottom: 72.009px; }
+
+.tam-sec {
+  font-size: 36.651px;
+  line-height: 44.505px; }
+
+.tam-ter {
+  font-size: 22.652px;
+  line-height: 36.651px; }
+  .tam-ter p, .tam-ter ul, .tam-ter ol {
+    font-size: 22.652px;
+    line-height: 36.651px;
+    margin-bottom: 36.651px; }
+  .tam-ter input, .tam-ter textarea {
+    font-size: 22.652px;
+    line-height: 36.651px;
+    margin-bottom: 14px; }
+
+.tam-cuat p {
+  font-size: 17px;
+  line-height: 36.651px;
+  margin-bottom: 17px; }
+
+.tam-min p, .tam-min ul, .tam-min ol {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 17px; }
 
 /**
 * SECCIONES
@@ -314,63 +379,3 @@ button:focus {
       color: white; }
     .contacto .contacto-form input:-ms-input-placeholder, .contacto .contacto-form textarea:-ms-input-placeholder {
       color: white; }
-
-/**
-* TIPOGRAFÍA
-* ----------
-*/
-.tam-prin {
-  font-size: 59.301px;
-  line-height: 72.009px;
-  margin-bottom: 72.009px; }
-
-.tam-sec {
-  font-size: 36.651px;
-  line-height: 44.505px; }
-
-.tam-ter {
-  font-size: 22.652px;
-  line-height: 36.651px; }
-  .tam-ter p, .tam-ter ul, .tam-ter ol {
-    font-size: 22.652px;
-    line-height: 36.651px;
-    margin-bottom: 36.651px; }
-  .tam-ter input, .tam-ter textarea {
-    font-size: 22.652px;
-    line-height: 36.651px;
-    margin-bottom: 14px; }
-
-.tam-cuat p {
-  font-size: 17px;
-  line-height: 36.651px;
-  margin-bottom: 17px; }
-
-.tam-min p, .tam-min ul, .tam-min ol {
-  font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 17px; }
-
-/**
-* BOTONES
-* ----------
-*/
-.boton {
-  text-decoration: none;
-  display: inline-block;
-  padding: 7px 14px 7px 14px;
-  font-size: 17px;
-  background-color: #f65828;
-  color: white;
-  text-align: center;
-  cursor: pointer; }
-  .boton.mediano {
-    padding: 14px 17px 14px 17px;
-    font-size: 22.652px; }
-  .boton.grande {
-    padding: 17px 22.652px 17px 22.652px;
-    font-size: 27.506px; }
-  .boton.redondeado {
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px; }

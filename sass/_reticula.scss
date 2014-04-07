@@ -1,0 +1,85 @@
+/**
+* LA RETÍCULA
+* -----------
+*/
+
+// Las filas
+.row {
+	@if($border-debug){ border: thin solid #DDD; }
+
+	overflow: hidden;
+	width: 100%;
+	max-width: $row-max-width;
+	min-width: $min-device-width;
+	margin: 0 auto;
+	padding-left: $base-px;
+	padding-right: $base-px;
+	position: relative;
+	.row {
+		min-width: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// La columnas
+.column, .columns {
+	@if($border-debug){ border: thin solid #998; }
+
+	margin-left: $base-porcentaje;
+	float: left;
+	position: relative;
+
+	img{max-width:100%; height: auto;}
+
+	// @include respond-to(iPhone) { background-color: red;}
+	// @include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
+	// @include respond-to(iPadHor) { background-color: green; }
+	// @include respond-to(desktop) { background-color: black; }
+}
+
+// @include respond-to(iPadVer) {
+// 	.ipad-break{
+// 		width: 100% !important; margin-left: 0;
+// 	}
+// }
+
+// Primer hijo
+.column:first-child, .columns:first-child {
+	margin-left: 0;
+}
+
+// Genera cada tamaño de columna
+.row {
+	@for $i from 1 through $cols{
+		@if $i == 1 {
+			.one.column {
+				width: columns($i);
+			}
+		}
+		.#{number-as-word($i)}.columns {
+			width: columns($i);
+		}
+	}
+}
+
+// Columnas centradas
+.row {
+	@for $i from 1 through $cols - 1 {
+		.#{number-as-word($i)}.centered {
+			margin-left: centered($i);
+		}
+	}
+}
+
+// Push
+.row {
+	@for $i from 1 through $cols - 1 {
+		.push_#{number-as-word($i)} {
+			margin-left: push_x($i);
+			&:first-child {
+				margin-left: push_x($i, true);
+			}
+		}
+	}
+}
