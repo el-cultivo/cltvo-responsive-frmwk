@@ -358,7 +358,7 @@ button:focus {
 	.contacto-form{
 		input, textarea{
 			background-color: $color-principal;
-			color: $color-texto;
+			color: $color-claro;
 			&[type="submit"]{ color: $color-claro;}
 			&::-webkit-input-placeholder { color: $color-claro;}
 			&:-moz-placeholder { color: $color-claro;}

@@ -303,7 +303,7 @@ button:focus {
   background-color: #f65828; }
   .contacto .contacto-form input, .contacto .contacto-form textarea {
     background-color: #f65828;
-    color: #454550; }
+    color: white; }
     .contacto .contacto-form input[type="submit"], .contacto .contacto-form textarea[type="submit"] {
       color: white; }
     .contacto .contacto-form input::-webkit-input-placeholder, .contacto .contacto-form textarea::-webkit-input-placeholder {
