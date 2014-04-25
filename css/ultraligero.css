@@ -114,6 +114,15 @@ button:focus {
 .centrado {
   text-align: center; }
 
+.sin-mar-izq {
+  margin-left: 0 !important; }
+
+@media only screen and (max-width: 768px) {
+  .medio-sin-mar-izq {
+    margin-left: 0 !important; } }
+@media only screen and (max-width: 568px) {
+  .chico-sin-mar-izq {
+    margin-left: 0 !important; } }
 .boton {
   text-decoration: none;
   display: inline-block;

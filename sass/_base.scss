@@ -64,6 +64,15 @@ button:focus {
 // Alineación texto
 .centrado{ text-align: center; }
 
+// Quitar el margen a alguna columna dependiendo el tamaño de pantalla
+.sin-mar-izq{margin-left: 0 !important;}
+@include respond-to(medio) {
+	.medio-sin-mar-izq{margin-left: 0 !important;}
+}
+@include respond-to(chico) {
+	.chico-sin-mar-izq{margin-left: 0 !important;}
+}
+
 // Botones
 .boton{
 	text-decoration: none;
