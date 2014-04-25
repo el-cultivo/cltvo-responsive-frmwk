@@ -20,6 +20,12 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	@include respond-to(iPadVer) {
+		&.ipad-ver-break{
+			.column, .columns{width: 100% !important; margin-left: 0;}
+		}
+	}
+
 }
 
 // La columnas
@@ -38,12 +44,6 @@
 	// @include respond-to(desktop) { background-color: black; }
 }
 
-// @include respond-to(iPadVer) {
-// 	.ipad-break{
-// 		width: 100% !important; margin-left: 0;
-// 	}
-// }
-
 // Primer hijo
 .column:first-child, .columns:first-child {
 	margin-left: 0;
@@ -52,34 +52,98 @@
 // Genera cada tamaño de columna
 .row {
 	@for $i from 1 through $cols{
-		@if $i == 1 {
-			.one.column {
-				width: columns($i);
-			}
-		}
-		.#{number-as-word($i)}.columns {
+		.grande-#{$i}.columns{
 			width: columns($i);
 		}
 	}
 }
-
-// Columnas centradas
+// Genera tamaños de columnas para dispositivos medios
+@include respond-to(medio) {
+	.row {
+		@for $i from 1 through $cols{
+			.medio-#{$i}.columns{
+				width: columns($i);
+			}
+		}
+	}
+}
+// Genera tamaños de columnas para dispositivos chico
+@include respond-to(chico) {
+	.row {
+		@for $i from 1 through $cols{
+			.chico-#{$i}.columns{
+				width: columns($i);
+			}
+		}
+	}
+}
+// Margen para las columnas centradas
 .row {
 	@for $i from 1 through $cols - 1 {
-		.#{number-as-word($i)}.centered {
+		.grande-#{$i}.centered {
 			margin-left: centered($i);
 		}
 	}
 }
+// Margen para columnas centradas medio
+@include respond-to(medio) {
+	.row {
+		@for $i from 1 through $cols - 1 {
+			.medio-#{$i}.centered {
+				margin-left: centered($i);
+			}
+		}
+		.medio-12.centered {margin-left: 0 !important;}
+	}
+}
+// Margen para columnas centradas chico
+@include respond-to(chico) {
+	.row {
+		@for $i from 1 through $cols - 1 {
+			.chico-#{$i}.centered {
+				margin-left: centered($i);
+			}
+		}
+		.chico-12.centered {margin-left: 0 !important;}
+	}
+}
 
-// Push
+// Pone margen a las columnas .empuja-grande
 .row {
 	@for $i from 1 through $cols - 1 {
-		.push_#{number-as-word($i)} {
+		.empuja-grande-#{$i} {
 			margin-left: push_x($i);
 			&:first-child {
 				margin-left: push_x($i, true);
 			}
 		}
+	}
+}
+// Pone margen a las columnas .empuja-medio
+@include respond-to(medio) {
+	.row {
+		@for $i from 1 through $cols - 1 {
+			.empuja-medio-#{$i} {
+				margin-left: push_x($i);
+				&:first-child {
+					margin-left: push_x($i, true);
+				}
+			}
+		}
+		.empuja-medio-0 {margin-left: 0 !important;}
+	}
+}
+// Pone margen a las columnas .empuja-chico
+@include respond-to(chico) {
+	.row {
+		@for $i from 1 through $cols - 1 {
+			.empuja-chico-#{$i} {
+				margin-left: push_x($i);
+				&:first-child {
+					margin-left: push_x($i, true);
+				}
+			}
+		}
+		.empuja-chico-0 {margin-left: 0 !important;}
 	}
 }

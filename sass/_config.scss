@@ -28,9 +28,9 @@ $cada-col: (100% - ( $base-porcentaje * ($cols - 1)) ) / $cols;
 $tamanos: 14 17 22.652 27.506 36.651 44.505 59.301 72.009 95.949 116.511 155.245 188.515;
 
 // Cambios de medidas
-$break-small: 568px;
-$break-medium: 768px;
-$break-normal: 1024px;
+$break-chico: 568px;
+$break-medio: 768px;
+$break-grande: 1024px;
 
 // Colores
 $color-destacado: #009393;
