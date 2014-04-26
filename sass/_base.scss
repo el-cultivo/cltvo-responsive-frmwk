@@ -92,7 +92,6 @@ button:focus {
 // El MENU
 
 .el-menu{
-	position: fixed;
 	background-color: $color-claro;
 	width: 100%;
 	z-index: 1000;
@@ -117,4 +116,9 @@ button:focus {
 		display: table-cell;
 		height: tamano(6);
 	}
+	&.fijo{
+		position: fixed;
+	}
+
+	display: none;
 }
