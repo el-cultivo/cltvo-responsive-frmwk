@@ -16,11 +16,10 @@ $row-max-width: 1024px;
 $min-device-width: 320px;
 
 // Tamaño base. Todos los tamaños de ajustan a esta unidad.
-$base: 17;
-$base-px: 17px;
-$base-porcentaje: percentage($base-px / $row-max-width);
+$base: 16;
+$base-px: 16px;
+$base-porcentaje: percentage($base-px / $row-max-width); // no cambiar
 $cols: 12;
-$cada-col: (100% - ( $base-porcentaje * ($cols - 1)) ) / $cols;
 
 // Mod Scale: Lista de posibles tamaños a usar
 // Usar variable a través de la función tamano()
@@ -33,13 +32,14 @@ $break-medio: 768px;
 $break-grande: 1024px;
 
 // Colores
-$color-destacado: #009393;
-$color-destacado2: #005151;
-$color-fondo: #f5f3dc;
-$color-texto: #454550;
-$color-principal: #f65828;
-$color-claro: white;
+$color-destacado: #F26C52;
+$color-destacado2: #C23350;
+$color-fondo: #00B5AF;
+$color-texto: #333333;
+$color-principal: #6D1E39;
+$color-claro: #F1EAD2;
 
 // Fuentes
-$fuente-prin: Open, sans-serif;
-//$fuente-sec: "Times New Roman", Times, serif;
+$fuente-sans: 'Myriad', sans-serif;
+$fuente-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+$fuente-cond: 'Myriad-Cond', sans-serif;

@@ -7,6 +7,7 @@
 .row {
 	@if($border-debug){ border: thin solid #DDD; }
 
+	display: block;
 	overflow: hidden;
 	width: 100%;
 	max-width: $row-max-width;
@@ -32,16 +33,10 @@
 .column, .columns {
 	@if($border-debug){ border: thin solid #998; }
 
+	display: block;
 	margin-left: $base-porcentaje;
 	float: left;
 	position: relative;
-
-	img{max-width:100%; height: auto;}
-
-	// @include respond-to(iPhone) { background-color: red;}
-	// @include respond-to(iPadVer) { width: 100% !important; margin-left: 0;}
-	// @include respond-to(iPadHor) { background-color: green; }
-	// @include respond-to(desktop) { background-color: black; }
 }
 
 // Primer hijo
@@ -66,6 +61,13 @@
 			}
 		}
 	}
+	.row{
+		.medio-12{
+			margin-bottom: tamano(2);
+			margin-left: 0;
+		}
+
+	}
 }
 // Genera tamaños de columnas para dispositivos chico
 @include respond-to(chico) {
@@ -76,7 +78,15 @@
 			}
 		}
 	}
+	.row{
+		.chico-12{
+			margin-bottom: tamano(2);
+			margin-left: 0;
+		}
+
+	}
 }
+
 // Margen para las columnas centradas
 .row {
 	@for $i from 1 through $cols - 1 {
@@ -147,3 +157,5 @@
 		.empuja-chico-0 {margin-left: 0 !important;}
 	}
 }
+
+@include nuevo-grid-simple(5, medio);

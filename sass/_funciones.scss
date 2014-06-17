@@ -5,44 +5,50 @@
 // 
 //
 
-// Se usa en el Loop para crear todos los tamaños de columnas
+// Cuánto debe medir cada columna (unidad)
+@function cada_col($cuantas-cols){
+	@return (100% - ( $base-porcentaje * ($cuantas-cols - 1)) ) / $cuantas-cols;
+}
+
+// Se usa en el Loop para crear todos los tamaños de columnas ej. .grade-12.columns
 @function columns($num){
-    @return ($cada-col * $num) + ($base-porcentaje * ($num - 1));
+    @return (cada_col($cols) * $num) + ($base-porcentaje * ($num - 1));
 }
 
 // Calculate Centered Class Margins
 @function centered($num) {
-    @return 50% - ((($num * $cada-col) + (($num - 1) * $base-porcentaje)) / 2);
+    @return 50% - ((($num * cada_col($cols)) + (($num - 1) * $base-porcentaje)) / 2);
 }
 
 // Crea el estilo para empujar columnas
 @function push_x($num, $first-child: false) {
 	@if $first-child {
-		@return ($cada-col * $num) + ($base-porcentaje * $num) ;
+		@return (cada_col($cols) * $num) + ($base-porcentaje * $num);
 	}
 	@else {
-		@return ($cada-col * $num) + ($base-porcentaje * $num ) + $base-porcentaje;
+		@return (cada_col($cols) * $num) + ($base-porcentaje * $num ) + $base-porcentaje;
 	}
 }
 
 
-// Devuelve los tamaños de la lista de tamaños (_config)
-// 
-// @param number $n: (req) número de casilla de la lista de tamaños (1 es el mínimo y 2 es el base)
-// @param string $unit: Unidades a regresar. Si le pasas rem lo calcula de acuerdo al número base
-// @param bool/number $division: Le puedes pasar un divisor para devolver cifras más pequeñas
+// $ratio el número de veces que quieres multiplicar la base
 
-@function tamano($n, $unit:px, $division:false){
-	$tamano: nth($tamanos, $n);
-	@if( type-of($division) == number ){
-		$tamano: $tamano/2;
-	}
-	@if($unit == px){
-		@return $tamano + px;
-	}@else if($unit == rem){
-		@return $tamano / $base + rem;
-	}	
+@function tamano($ratio){
+	@return $base * $ratio + px;
 }
+
+// @function tamano($n, $unit:px, $division:false){
+
+// 	$tamano: nth($tamanos, $n);
+// 	@if( type-of($division) == number ){
+// 		$tamano: $tamano/2;
+// 	}
+// 	@if($unit == px){
+// 		@return $tamano + px;
+// 	}@else if($unit == rem){
+// 		@return $tamano / $base + rem;
+// 	}	
+// }
 
 // Regresa el valor sin unidades
 @function sinUnidad($num) {
