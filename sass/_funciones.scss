@@ -5,15 +5,30 @@
 // 
 //
 
-// Cuánto debe medir cada columna (unidad)
+// Cuánto debe medir cada columna (unidad) 
+// Se usa -1 por la primer columna a la que se le quita el margen izquierdo
 @function cada_col($cuantas-cols){
 	@return (100% - ( $base-porcentaje * ($cuantas-cols - 1)) ) / $cuantas-cols;
 }
+
 
 // Se usa en el Loop para crear todos los tamaños de columnas ej. .grade-12.columns
 @function columns($num){
     @return (cada_col($cols) * $num) + ($base-porcentaje * ($num - 1));
 }
+
+// Cuánto debe medir cada cuadro (unidad)
+// No se le resta porque todos tienen margen derecho
+@function cada_cuadro($cuantas-cols){
+	@return (100% - ( $base-porcentaje * ($cuantas-cols)) ) / $cuantas-cols;
+}
+
+
+// Se usa en el Loop para crear todos los tamaños de columnas ej. .grade-12.columns
+@function cuadros($num){
+    @return (cada_cuadro($cols) * $num) + ($base-porcentaje * ($num - 1));
+}
+
 
 // Calculate Centered Class Margins
 @function centered($num) {
