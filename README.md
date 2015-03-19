@@ -5,7 +5,7 @@ CSS responsive framework by El Cultivo
 
 ## Customizable
 
-Usa el mínimo de estilo para que no tengas que modificar ni sobreescribir ni una línea.
+Usa el mínimo de estilo para que no tengas que modificar ni sobrescribir ni una línea.
 
 ## Comenzar a usar
 

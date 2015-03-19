@@ -43,18 +43,143 @@ table {
 * SET UP VARS
 * -----------
 *
-* Antes de sobreescirbir, échale un ojo a este file
-* Algunos estilos son fácilmente configurables 
-* con sólo cambiando el valor de las variables en _config.scss
+* Antes de sobrescribir, ├®chale un ojo a este file
+* Algunos estilos son f├ícilmente configurables 
+* con s├│lo cambiando el valor de las variables en _config.scss
 * 
 */
-/* MIXINS LOCALES */
 /**
-* ESTILOS BÁSICOS 
+* MIXINS
+* ------
+* Agrega aqu├¡ tus mixins
+* 
+*/
+/**
+*  Especificar la fuentes personalizada para el dise├▒o de la pagina
+*	
+*  @param string $font-family: nombre de la fuente
+*  @param string $font-filename: nombre del origen (archivo) que contiene la fuente
+*  @param string|number $font-weight: alto de la fuente. 
+*  @param string $font-style: estilo de la fuente. 
+*  @param string $font-stretch: anchura de la fuente. 
+*/
+/**
+* Devuelve tama├▒o de fuente con line-height y margin bottom.
+* 
+* @param number $font-size: (req) tama├▒o de la fuente
+* @param number $line-height: Alto de la interl├¡nea. Si no le pasas n├║mero lo calcula 
+* @param bool/number $margin: Margen inferior. Si no le pasas n├║mero usa la interl├¡nea
+*
+* la funci├│n tamano se encuentra en el archivo _funciones.scss
+*/
+/**
+*  imagen de fondo
+* 
+* @param string $file: nombre del origen (archivo) de la imagen
+* @param string $type: formato (extensi├│n) de la imagen
+* @param number $width: Ancho de la imagen
+* @param number $height: Alto de la imagen
+*/
+/**
+* MIXINS LOCALES
+* ------
+* Agrega aqu├¡ tus mixins locales
+* 
+*/
+/**
+*  filtro para mostrar la imagen dentro de los l├¡mites fondo
+* 
+* @param string $file: nombre del origen (archivo) de la imagen
+* @param string $type: formato (extensi├│n) de la imagen
+* @param number $width: Ancho de la imagen
+* @param number $height: Alto de la imagen
+*/
+/**
+*  Asigna el ancho a las columnas 
+* 
+* @param number $cols: numero de columnas 
+* @param string|number $respond-to: ajuste del tama├▒o de las media queries
+*
+* la funci├│n cada_col se encuentra en el archivo _funciones.scss
+*/
+/**
+* FUNCTIONS
+* ---------
+* Agrega aqu├¡ tus funciones 
+* 
+*/
+/**
+* Cu├ínto debe medir cada columna (unidad) 
+*
+* @param number $cuantas-cols: numero total de columnas 
+* @return number porcentaje del ancho de columnas
+*
+* Se usa -1 por la primer columna a la que se le quita el margen izquierdo 
+*/
+/**
+* Se usa en el Loop para crear todos los tama├▒os de columnas ej. .grade-12.column
+*
+* @param number $num: numero de la columna que se especifica
+* @return number porcentaje del ancho de la columna que se especifica
+*
+*/
+/**
+* Cu├ínto debe medir cada cuadro (unidad)
+*
+* @param number $cuantas-cols: numero total de cuadros 
+* @return number porcentaje del ancho de cuadros
+*
+* No se le resta porque todos tienen margen derecho
+*/
+/**
+* Se usa en el Loop para crear todos los tama├▒os de cuadros ej. .grade-12.column
+*
+* @param number $num: numero de cuadro que se especifica  
+* @return number porcentaje del ancho del cuadro que se especifica
+*
+*/
+/**
+* Calcula los margenes de la class centered
+*
+* @param number $num: numero de columna 
+* @return number porcentaje del tama├▒o de la class centered
+*
+*/
+/**
+* Crea el estilo para crear los espacios a la izquierda
+*
+* @param number $num: numero de columna 
+* @param boolean $first-child trigger agrenga un el margen de la ultima columna al caso seleccionado Por defecto false.
+* @return number porcentaje del tama├▒o empujar columnas 
+*
+*/
+/**
+* Generador de tama├▒os en funci├│n de la base 
+*
+* @param number $ratio: el n├║mero de veces que quieres multiplicar la base
+* @return number pixeles de referencia  
+*
+*/
+/**
+* Regresa el valor sin unidades
+*
+* @param number $num: valor a que se le quieran quitar las unidades 
+* @return number valor sin unidades 
+*
+*/
+/**
+* Crea el nombre de las class de las columnas 
+*
+* @param number $number: numero de columna 
+* @return string regresa las clases
+*
+*/
+/**
+* ESTILOS B├üSICOS 
 * ---------------
 *
-* Estilos básicos de ultraligero
-* Edítalos o sobreescríbelos
+* Estilos b├ísicos de ultraligero
+* Ed├¡talos o sobreescr├¡belos
 * 
 */
 * {
@@ -62,9 +187,9 @@ table {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
   *::selection {
-    background: #f26c52; }
+    background: #F26C52; }
   *::-moz-selection {
-    background: #f26c52; }
+    background: #F26C52; }
 
 html {
   font-size: 16px; }
@@ -82,10 +207,10 @@ strong {
   font-weight: bold; }
 
 a {
-  color: #c23350;
+  color: #C23350;
   text-decoration: none; }
   a:hover {
-    color: #6d1e39; }
+    color: #6D1E39; }
 
 img {
   -ms-interpolation-mode: bicubic; }
@@ -110,7 +235,7 @@ ul {
   margin-left: 1.1em; }
 
 input, textarea {
-  border: 1px solid #f1ead2;
+  border: 1px solid #F1EAD2;
   padding-right: .5em;
   padding-left: .5em;
   width: 100%;
@@ -143,8 +268,8 @@ form input[type="submit"] {
 * CLASES GLOBALES 
 * ---------------
 *
-* Algunos elementos están pre-estilisados
-* Usa estas clases para esilizar menús, botones, etc
+* Algunos elementos est├ín pre-estilisados
+* Usa estas clases para esilizar men├║s, botones, etc
 * Edita o sobreescribe lo que no te guste
 * 
 */
@@ -184,8 +309,8 @@ form input[type="submit"] {
   padding: 16px 16px;
   font-size: 16px;
   line-height: 16px;
-  background-color: #6d1e39;
-  color: #f1ead2;
+  background-color: #6D1E39;
+  color: #F1EAD2;
   text-align: center;
   cursor: pointer; }
   .boton.chico {
@@ -227,29 +352,42 @@ form input[type="submit"] {
     display: none; }
 
 /**
-* LA RETÍCULA
+* LA RET├ìCULA
 * -----------
 */
-.row {
+.row, .cuadricula {
   display: block;
   overflow: hidden;
-  width: 100%;
   max-width: 1024px;
   min-width: 320px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
   position: relative; }
-  .row .row {
+  .row .cuadricula, .row .row, .cuadricula .cuadricula, .cuadricula .row {
     min-width: 0;
     padding-left: 0;
     padding-right: 0; }
 
-.column, .columns {
+.row {
+  width: 100%; }
+
+.cuadricula {
+  width: 101.5625%; }
+
+@media only screen and (min-width: 1024px) {
+  .cuadricula {
+    padding-right: 0px; } }
+.column, .columns, .cuadro {
   display: block;
-  margin-left: 1.5625%;
   float: left;
   position: relative; }
+
+.cuadro {
+  margin-right: 1.5625%; }
+
+.column, .columns {
+  margin-left: 1.5625%; }
 
 .column:first-child, .columns:first-child {
   margin-left: 0; }
@@ -279,6 +417,31 @@ form input[type="submit"] {
 .row .grande-12.columns {
   width: 100%; }
 
+.cuadricula .grande-1.cuadro {
+  width: 6.77083%; }
+.cuadricula .grande-2.cuadro {
+  width: 15.10417%; }
+.cuadricula .grande-3.cuadro {
+  width: 23.4375%; }
+.cuadricula .grande-4.cuadro {
+  width: 31.77083%; }
+.cuadricula .grande-5.cuadro {
+  width: 40.10417%; }
+.cuadricula .grande-6.cuadro {
+  width: 48.4375%; }
+.cuadricula .grande-7.cuadro {
+  width: 56.77083%; }
+.cuadricula .grande-8.cuadro {
+  width: 65.10417%; }
+.cuadricula .grande-9.cuadro {
+  width: 73.4375%; }
+.cuadricula .grande-10.cuadro {
+  width: 81.77083%; }
+.cuadricula .grande-11.cuadro {
+  width: 90.10417%; }
+.cuadricula .grande-12.cuadro {
+  width: 98.4375%; }
+
 @media only screen and (max-width: 768px) {
   .row .medio-1.columns {
     width: 6.90104%; }
@@ -305,7 +468,32 @@ form input[type="submit"] {
   .row .medio-12.columns {
     width: 100%; }
 
-  .row .medio-12 {
+  .cuadricula .medio-1.cuadro {
+    width: 6.77083%; }
+  .cuadricula .medio-2.cuadro {
+    width: 15.10417%; }
+  .cuadricula .medio-3.cuadro {
+    width: 23.4375%; }
+  .cuadricula .medio-4.cuadro {
+    width: 31.77083%; }
+  .cuadricula .medio-5.cuadro {
+    width: 40.10417%; }
+  .cuadricula .medio-6.cuadro {
+    width: 48.4375%; }
+  .cuadricula .medio-7.cuadro {
+    width: 56.77083%; }
+  .cuadricula .medio-8.cuadro {
+    width: 65.10417%; }
+  .cuadricula .medio-9.cuadro {
+    width: 73.4375%; }
+  .cuadricula .medio-10.cuadro {
+    width: 81.77083%; }
+  .cuadricula .medio-11.cuadro {
+    width: 90.10417%; }
+  .cuadricula .medio-12.cuadro {
+    width: 98.4375%; }
+
+  .row .medio-12.columns {
     margin-bottom: 32px;
     margin-left: 0; } }
 @media only screen and (max-width: 568px) {
@@ -334,7 +522,32 @@ form input[type="submit"] {
   .row .chico-12.columns {
     width: 100%; }
 
-  .row .chico-12 {
+  .cuadricula .chico-1.cuadro {
+    width: 6.77083%; }
+  .cuadricula .chico-2.cuadro {
+    width: 15.10417%; }
+  .cuadricula .chico-3.cuadro {
+    width: 23.4375%; }
+  .cuadricula .chico-4.cuadro {
+    width: 31.77083%; }
+  .cuadricula .chico-5.cuadro {
+    width: 40.10417%; }
+  .cuadricula .chico-6.cuadro {
+    width: 48.4375%; }
+  .cuadricula .chico-7.cuadro {
+    width: 56.77083%; }
+  .cuadricula .chico-8.cuadro {
+    width: 65.10417%; }
+  .cuadricula .chico-9.cuadro {
+    width: 73.4375%; }
+  .cuadricula .chico-10.cuadro {
+    width: 81.77083%; }
+  .cuadricula .chico-11.cuadro {
+    width: 90.10417%; }
+  .cuadricula .chico-12.cuadro {
+    width: 98.4375%; }
+
+  .row .chico-12.columns {
     margin-bottom: 32px;
     margin-left: 0; } }
 .row .grande-1.centered {
@@ -578,7 +791,7 @@ form input[type="submit"] {
   font-style: italic;
   font-stretch: normal; }
 /**
-* TIPOGRAFÍA
+* TIPOGRAF├ìA
 * ----------
 */
 .tam-prin {
@@ -621,31 +834,33 @@ form input[type="submit"] {
   padding-bottom: 144px; }
 
 .introduccion {
-  background-color: #6d1e39;
-  color: #f1ead2; }
+  background-color: #6D1E39;
+  color: #F1EAD2; }
   .introduccion h1 {
     margin-bottom: 144px; }
 
 .consulta {
-  background-color: #00b5af; }
+  background-color: #00B5AF; }
 
 .como-funciona {
   background-color: #333333; }
   .como-funciona .boton {
-    background-color: #f26c52; }
+    background-color: #F26C52; }
 
 .contacto {
-  background-color: #6d1e39; }
+  background-color: #6D1E39; }
   .contacto .contacto-form input, .contacto .contacto-form textarea {
-    background-color: #6d1e39;
-    color: #f1ead2; }
+    background-color: #6D1E39;
+    color: #F1EAD2; }
     .contacto .contacto-form input[type="submit"], .contacto .contacto-form textarea[type="submit"] {
-      color: #f1ead2; }
+      color: #F1EAD2; }
     .contacto .contacto-form input::-webkit-input-placeholder, .contacto .contacto-form textarea::-webkit-input-placeholder {
-      color: #f1ead2; }
+      color: #F1EAD2; }
     .contacto .contacto-form input:-moz-placeholder, .contacto .contacto-form textarea:-moz-placeholder {
-      color: #f1ead2; }
+      color: #F1EAD2; }
     .contacto .contacto-form input::-moz-placeholder, .contacto .contacto-form textarea::-moz-placeholder {
-      color: #f1ead2; }
+      color: #F1EAD2; }
     .contacto .contacto-form input:-ms-input-placeholder, .contacto .contacto-form textarea:-ms-input-placeholder {
-      color: #f1ead2; }
+      color: #F1EAD2; }
+
+/*# sourceMappingURL=ultraligero.css.map */
