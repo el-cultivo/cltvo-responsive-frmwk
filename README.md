@@ -27,4 +27,6 @@ $cols: 12;		// Número de columnas en la retícula
 ## Creditos
 Insirado en Frameworks como [Gumpy](http://gumbyframework.com/) y retículas tipográficas usando [Modular Scale](http://modularscale.com/) y [diseños flat](http://fltdsgn.com/)
 
+Para más información, consultar el [Wiki](https://github.com/el-cultivo/cltvo-responsive-frmwk/wiki).
+
 **¡Espero les sea util! :D**
