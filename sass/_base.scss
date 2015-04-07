@@ -51,13 +51,17 @@ input, textarea{
 	border: 1px solid $color-claro;
 	padding-right: .5em;
 	padding-left: .5em;
-	width: 100%;
+	
 	&[type="submit"]{cursor: pointer;}
 	
 	-moz-appereance:none;
     -webkit-appearance: none;
     border-radius: 0;
 }
+input[type="text"], input[type="password"],  textarea{
+	width: 100%;
+}
+
 
 input:focus,
 select:focus,

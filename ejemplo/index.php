@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="../css/ultraligero.css">
+<link rel="stylesheet" href="./css/ultraligero.css">
 
 <p class="centrado">Row y columns</p><br>
 <div class="row">
@@ -41,6 +41,11 @@
 	 	<div class="columns grande-1 medio-2 chico-3 ">21 </div>
 		<div class="columns grande-11 medio-10 chico-9">22 </div>
 	</div>
+</div>
+<br>
+<div class="row">
+	 	<div class="columns grande-1 medio-2 centered">23 </div>
+		<div class="columns grande-10 medio-11 centered">24 </div>
 </div>
 <hr>
 <p class="centrado">Cuadricula y Cuadro</p><br>

@@ -238,12 +238,14 @@ input, textarea {
   border: 1px solid #F1EAD2;
   padding-right: .5em;
   padding-left: .5em;
-  width: 100%;
   -moz-appereance: none;
   -webkit-appearance: none;
   border-radius: 0; }
   input[type="submit"], textarea[type="submit"] {
     cursor: pointer; }
+
+input[type="text"], input[type="password"], textarea {
+  width: 100%; }
 
 input:focus,
 select:focus,
