@@ -4,7 +4,7 @@
 *
 * Antes de sobrescribir, échale un ojo a este file
 * Algunos estilos son fácilmente configurables 
-* con sólo cambiando el valor de las variables en _config.scss
+* con sólo cambiar el valor de las variables en _config.scss
 * 
 */
 
@@ -12,14 +12,23 @@
 $border-debug: false;
 
 // Tamaños mínimos
-$row-max-width: 1024px;
+$row-max-width: 1068px;
 $min-device-width: 320px;
 
 // Tamaño base. Todos los tamaños se ajustan a esta unidad.
-$base: 16;
-$base-px: 16px;
+$base: 20;
+$base-px: 20px;
 $base-porcentaje: percentage($base-px / $row-max-width); // no cambiar
 $cols: 12;
+
+//Margen estándar
+$mstd: 84px;
+
+//Paddings estándar
+$ppage: 166px;//Padding top de las páginas
+$pstd: 51px;
+$pch:38px;
+$poverlay: 73px;
 
 // Mod Scale: Lista de posibles tamaños a usar
 // Usar variable a través de la función tamano()
@@ -28,18 +37,32 @@ $tamanos: 14 17 22.652 27.506 36.651 44.505 59.301 72.009 95.949 116.511 155.245
 
 // Cambios de medidas
 $break-chico: 568px;
+$break-medio-chico: 710px;
 $break-medio: 768px;
 $break-grande: 1024px;
 
 // Colores
-$color-destacado: #F26C52;
-$color-destacado2: #C23350;
-$color-fondo: #00B5AF;
-$color-texto: #333333;
-$color-principal: #6D1E39;
-$color-claro: #F1EAD2;
+$color-texto: #000;//
+$color-fondo: #FFF;
+$color-claro: $color-fondo ;//
+$color-oscuro: $color-texto;
+$color-destacado: $color-fondo;//		
+$color-destacado2: $color-texto;//
+$color-principal: $color-texto;
+
 
 // Fuentes
-$fuente-sans: 'Myriad', sans-serif;
-$fuente-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-$fuente-cond: 'Myriad-Cond', sans-serif;
+$fuente-sans: Arial, 'Myriad', sans-serif;
+$fuente-serif: Minion, "Times New Roman", Times, Baskerville, Georgia, serif;
+$fuente-titulo: $fuente-sans;
+$fuente-parrafo: $fuente-serif;
+$fuente-cond: Minion, 'Myriad-Cond', sans-serif;
+
+//Heights
+$imagen_about_height:390px;
+$imagen_ficha-proyectos_height:188px;
+$imagen_prensa_height:224px;
+
+//Widths
+$imagen_ficha-width:376px;
+$imagen_prensa_width:348px;

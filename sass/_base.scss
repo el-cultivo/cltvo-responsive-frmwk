@@ -47,39 +47,6 @@ ul{
 	list-style: disc;
 	margin-left: 1.1em;
 }
-input, textarea{
-	border: 1px solid $color-claro;
-	padding-right: .5em;
-	padding-left: .5em;
-	
-	&[type="submit"]{cursor: pointer;}
-	
-	-moz-appereance:none;
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-input[type="text"], input[type="password"],  textarea{
-	width: 100%;
-}
-
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-    border-color: lighten($color-fondo, 40%);
-}
-
-form{
-	input[type="text"], textarea, input[type="password"]{
-		@include fuente_gnl();
-		margin-bottom: tamano(1);
-	}
-	input{height: tamano(3.5);}
-	textarea{padding-top: tamano(1);}
-	input[type="submit"]{margin-bottom: tamano(6);}
-}
 
 
 /**

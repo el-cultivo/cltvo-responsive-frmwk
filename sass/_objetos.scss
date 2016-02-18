@@ -1,0 +1,25 @@
+//Registra los Objetos del CSS
+
+
+//Codigo que se repite dentro de otros Objetos
+@import "extras/helpers";
+
+//Contenedores: 
+	//Paddings, Heights 
+				//	y Backgrounds propios de las mismas
+
+
+@import "objetos/botones";//.
+//@import "objetos/checkboxes";//.
+@import "objetos/flechas";//.
+@import "objetos/iconos";//.
+@import "objetos/imagenes";//.h
+@import "objetos/inputs";//.
+@import "objetos/links"; //.
+//@import "objetos/logos"; //.
+@import "objetos/overlays";//.overlay
+@import "objetos/parrafos"; //.
+@import "objetos/separadores"; //.
+@import "objetos/titulos"; //.
+@import 'objetos/_icono__css-menu';//.
+

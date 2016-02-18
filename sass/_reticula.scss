@@ -110,6 +110,32 @@
 
 	}
 }
+
+// Genera tamaños de columnas para dispositivos medio-chicos
+@include respond-to(medio-chico) {
+	.row {
+		@for $i from 1 through $cols{
+			.medio-chico-#{$i}.columns{
+				width: columns($i);
+			}
+		}
+	}
+	.cuadricula {
+	@for $i from 1 through $cols{
+			.medio-chico-#{$i}.cuadro{
+				width: cuadros($i);
+			}
+		}
+	}
+	.row{
+		.medio-chico-12.columns{
+			margin-bottom: tamano(2);
+			margin-left: 0;
+		}
+
+	}
+}
+
 // Genera tamaños de columnas para dispositivos chico
 @include respond-to(chico) {
 	.row {
@@ -191,6 +217,22 @@
 		.empuja-medio-0 {margin-left: 0 !important;}
 	}
 }
+
+// Pone margen a las columnas .empuja-medio-chico
+@include respond-to(medio-chico) {
+	.row {
+		@for $i from 1 through $cols - 1 {
+			.empuja-medio-chico-#{$i} {
+				margin-left: push_x($i);
+				&:first-child {
+					margin-left: push_x($i, true);
+				}
+			}
+		}
+		.empuja-medio-chico-0 {margin-left: 0 !important;}
+	}
+}
+
 // Pone margen a las columnas .empuja-chico
 @include respond-to(chico) {
 	.row {

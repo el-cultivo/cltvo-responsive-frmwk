@@ -1,0 +1,77 @@
+//Helper Classes
+
+//Placeholders (%): usar con @extend
+	%basicofont
+	{	
+		color:$color-texto;
+		line-height: 1.2;
+	}
+
+	%boldfont
+	{
+		@extend %basicofont;
+		text-transform: uppercase;
+		font-family: $fuente-titulo;
+		font-weight: bold;
+	}
+
+	%footerfont
+	{
+		@extend %basicofont;
+		font-size: 12px;
+		font-family: $fuente-sans;
+	}
+
+	%parrafont
+	{
+		@extend %basicofont;
+		color:$color-texto;
+		font-family: $fuente-parrafo;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 16px;	
+	}
+
+//Usar en el HTML
+.absolute {position: absolute;}
+.relative {position: relative;}
+
+.fixed //usar por ejemplo para un menu flotante
+	{position:fixed;
+	 max-width: 100%;
+	 width: 100%;}
+
+.d-bl
+{display:block;}
+
+// .full-width-row
+// 	{@extend .row;
+// 	 max-width:100%;
+// 	 padding: 0 $base-px;}
+
+#home home--blanco {color:$color-destacado;}
+
+.left
+	{float:left;}
+
+.m0
+	{margin:0;}
+
+.mb0
+	{margin-bottom: 0;}
+
+.linea
+{
+	width: 100%;
+	border-bottom: $color-oscuro solid 1px;
+}
+
+.right
+	{float: right;}
+
+.top
+	{top:0;}
+
+.ontop
+	{z-index:99;}
+

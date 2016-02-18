@@ -1,0 +1,42 @@
+//Nuevo Config: Carpeta con archivos
+
+TAMAÑOS
+// true para ver el la retícula con borde
+$border-debug: false;
+
+// Tamaños mínimos
+$row-max-width: 1280px;
+$min-device-width: 320px;
+
+// Tamaño base. Todos los tamaños se ajustan a esta unidad.
+$base: 20;
+$base-px: 20px;
+$base-porcentaje: percentage($base-px / $row-max-width); // no cambiar
+$cols: 12;
+
+//Breaks
+//Selección de tipo de breaks mobile first o standard
+
+
+EN OTRO ARCHIVIO, COLORES
+//Colores
+$texto_claro
+$texto_oscuro
+$texto_titulo: $texto_oscuro
+$link: $c_texto_oscuro
+
+$fondo_claro: $c_texto_claro
+$fondo_oscuro: $c_texto_oscuro
+
+
+//Fuentes
+$titulo:
+$parrafo:
+
+// Declara tus fuentes usando el MIXIN
+
+@include declara-font-face(Neusa, '../fonts/bvaftfneusa-regular-webfont', normal);
+@include declara-font-face(Neusa, '../fonts/bvaftfneusa-demibold-webfont', bold);
+@include declara-font-face(Helve, '../fonts/HelveticaNeue-Light', 200);
+
+

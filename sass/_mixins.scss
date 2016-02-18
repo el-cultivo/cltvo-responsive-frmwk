@@ -78,6 +78,9 @@
 	@if $media == chico {
 		@media only screen and (max-width: $break-chico) { @content; }
 	}
+	@else if $media == medio-chico {
+		@media only screen and (max-width: $break-medio-chico) { @content; }
+	}
 	@else if $media == medio {
 		@media only screen and (max-width: $break-medio) { @content; }
 	}
@@ -218,4 +221,29 @@
 
 		.texto{ margin-left: 38px; display: block; margin-top: 5px;}
 	}
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin bg-cover($position){
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-position: $position;
 }

@@ -1,0 +1,62 @@
+$cols: 3;
+
+$breaks: (  chico: 600, 
+            medio: 800, 
+            grande: 1200, 
+            extra: 1400
+          );
+
+
+  @mixin respond-to($break) {
+    @if map_has_key($breaks, $break) {
+      @media only screen and (max-width: map_get($breaks, $break)) {
+        @content;
+      }
+    }
+    @else {
+      @media only screen and (max-width: $break) {
+        @content;
+      }
+    }
+  }
+
+
+@include respond-to(medio) {
+  .body {
+    width: 100%;
+  }
+}
+
+@include respond-to(300) {
+  .body {
+    width: 100%;
+  }
+}
+
+@mixin generador-de-columnas($break, $cols) {
+  @for $i from 1 through $cols {
+    //Ensanchador
+    .#{$break}-#{$i}.cuadro {
+      width: cuadros($i);
+    }
+    //Empujador
+    .empuja-#{$break}-#{$i}.cuadro {
+      margin-left: push_x($i);
+      &:first-child {
+        margin-left: push_x($i, true);
+      }
+    }
+    //Centrador
+    .#{$break}-#{$i}.centered {
+      margin-left: centered($i);
+    }
+  }
+}
+
+@each $break, $size in $breaks {
+  @include respond-to($break) {
+    @include generador-de-columnas($break, $cols);
+  }
+}
+
+@include generador-de-columnas(supergrande, $cols);
