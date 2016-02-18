@@ -1,8 +1,0 @@
-/*Set to true for -webkit-,-moz-appereance:none 
-useful for editing radio buttons amog other things*/
-@mixin customAppearance($var){
-    @if $var == true{
-            -moz-appereance:none;
-            -webkit-appearance: none;
-    }
-}
