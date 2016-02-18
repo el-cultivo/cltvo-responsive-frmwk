@@ -1,0 +1,6 @@
+$ cat .gitignore
+
+# Podemos especificar archivos individuales
+.DS_Store
+/sass/.sass-cache/
+config.codekit
