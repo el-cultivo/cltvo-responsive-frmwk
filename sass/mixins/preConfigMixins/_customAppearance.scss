@@ -1,7 +1,10 @@
-/*Set to true for -webkit-,-moz-appereance:none 
-useful for editing radio buttons amog other things*/
-@mixin customAppearance($var){
-    @if $var == true{
+/**
+ * Set to true for -webkit-,-moz-appereance:none useful for editing radio buttons among other things
+ * @param  {boolean} $boolean 
+ * @return {property}      
+ */
+@mixin customAppearance($boolean){
+    @if $boolean == true{
             -moz-appereance:none;
             -webkit-appearance: none;
     }

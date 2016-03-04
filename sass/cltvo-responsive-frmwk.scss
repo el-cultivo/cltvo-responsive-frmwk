@@ -13,31 +13,14 @@
 
 @charset "UTF-8";
 
-@import "ver.1/reset";
-@import "ver.1/_config"; 
-@import "ver.1/_mixins";
-@import "ver.1/_funciones";
-@import "ver.1/_base";
-@import "ver.1/_reticula";
+@import "_preConfigMixins";
+@import "_config";
+@import "_functions";
 
-//OOCSS Framework
-@import "mixins/preConfigMixins/_preConfigMixins";
-@import "config/_config";
-@import "extras/_clearfix";
-@import "extras/_helpers";
-@import "elements/_elements";
-@import "mixins/_mixins";//
-@import "modules/_modules";
-
-/**
-* FUENTES
-* -------
-*/
-
-// Declara tus fuentes usando el MIXIN
-
-@include declara-font-face(Arial, '../fonts/Arial-BoldMT', bold);
-@include declara-font-face(Arial, '../fonts/ArialMT', normal);
-@include declara-font-face(Minion, '../fonts/MinionPro-Bold', bold);
-@include declara-font-face(Minion, '../fonts/MinionPro-Regular', normal);
-@include declara-font-face(Minion, '../fonts/MinionPro-It', normal, italic);
+	//Css begins compling here
+@import "_mixins";//
+@import "_base";
+@import "extras/_helpers";// 
+@import "_elements";
+@import "_grid";//
+@import "_modules";

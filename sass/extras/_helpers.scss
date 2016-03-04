@@ -1,77 +1,65 @@
-//Helper Classes
+//_________________________ Helpers _________________________ \\
 
-//Placeholders (%): usar con @extend
-	%basicofont
-	{	
-		color:$color-texto;
-		line-height: 1.2;
-	}
+/**
+ * All helpers use the !important keyword, if ever necessary their 
+ * output might be overriden with the !important keyword in a 
+ * property located lower in the cascade.
+ * 
+ */
 
-	%boldfont
-	{
-		@extend %basicofont;
-		text-transform: uppercase;
-		font-family: $fuente-titulo;
-		font-weight: bold;
-	}
+/**
+ *	Helpers Index:
+ *		Position
+ *		Display
+ *		Gutters
+ *		Paddings and Margins
+ *		JS Classes
+ * 
+ */
 
-	%footerfont
-	{
-		@extend %basicofont;
-		font-size: 12px;
-		font-family: $fuente-sans;
-	}
 
-	%parrafont
-	{
-		@extend %basicofont;
-		color:$color-texto;
-		font-family: $fuente-parrafo;
-		font-weight: normal;
-		font-style: normal;
-		font-size: 16px;	
-	}
+/*************************** Position ***************************/
 
-//Usar en el HTML
-.absolute {position: absolute;}
-.relative {position: relative;}
+.absolute {position: absolute !important;}
+.relative {position: relative !important;}
+.fixed, %fixed  {//usar por ejemplo para un menu flotante
+					position:fixed !important;
+				 	max-width: 100% !important;
+					width: 100% !important;
+					left:0;
+				}
 
-.fixed //usar por ejemplo para un menu flotante
-	{position:fixed;
-	 max-width: 100%;
-	 width: 100%;}
+.fixed-desktop 	{	@include biggerThan(medio) { 
+						position:fixed !important;
+					 	max-width: 100% !important;
+					 	width: 100% !important;
+						left:0;
+					} 
+				}
 
-.d-bl
-{display:block;}
+.left 			{float:left !important;}
+.right 			{float:right !important;}
+.top 			{top:0 !important;}
+.top56 			{ top:56px; }
+.ontop 			{ z-index:99 !important;}
+.z-0 			{ z-index: 0 !important;}
 
-// .full-width-row
-// 	{@extend .row;
-// 	 max-width:100%;
-// 	 padding: 0 $base-px;}
+/*************************** Display ***************************/
+.d-bl 			{ display:block !important;}
+.inline		 	{ display: inline;}
 
-#home home--blanco {color:$color-destacado;}
+/*************************** Gutters ***************************/
+.gutter-r 		{ padding-right: $pad/2 !important;	}
+.gutter-l 		{ padding-left: $pad/2 !important;	}
+.gutter-rl 		{ padding: 0 $pad/2 !important;	}
 
-.left
-	{float:left;}
 
-.m0
-	{margin:0;}
+/*************************** Paddings and Margins ***************************/
+.p0 			{ padding: 0 !important;}
+.pt 			{ padding-top: 26px;}
+.m0 			{ margin:0 !important;}
+.mb0			{ margin-bottom: 0 !important;}
 
-.mb0
-	{margin-bottom: 0;}
-
-.linea
-{
-	width: 100%;
-	border-bottom: $color-oscuro solid 1px;
-}
-
-.right
-	{float: right;}
-
-.top
-	{top:0;}
-
-.ontop
-	{z-index:99;}
+/*************************** JS Classes ***************************/
+.noScroll_JS 	{ overflow:hidden !important;} //add on body through JS to prevent scrolling when using a full hright fixed overlay
 

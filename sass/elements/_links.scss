@@ -1,35 +1,4 @@
 %link{
-	&:hover {color: lightgrey;}
 
-}
-
-%linkMenuTop {
-	@extend %link;
-	@extend %subtitle; 
-	text-transform: none;
-}
-
-%linkMenuMain{ 
-	@extend %link;
-	@extend %subtitle;
-	font-family: $fuente-sans; 
-    display:block; 
-    margin-bottom: 4px;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-%link-padding {
-	@extend %link;padding: $pad/5 0;}
-
-.link--active {
-	@extend %link;
-	font-weight: bold;
-	@extend %link-padding;
-}
-
-.link--home {
-	@extend %link;
-	color: $colorBackground !important;
 }
 
