@@ -1,11 +1,39 @@
-@import "_aspectRatio";//
-@import "_bgCover";//
-@import "_inputStyling";//
-@import "_delimiter";// Creates css delimiters for breadcrumbs,links, or else.
-@import "_position";//XY positioning with translate
-@import "_overlay";// acepta background color y booleana sobre la transición
-@import "_respondTo";// 
-@import "_respondToMin";// 
+//_________________________ General Mixins _________________________ \\
+/**
+ *Mixins for:
+ *	Inserting Content
+ *	Objects
+ *	Positioning
+ *	Responsive
+ *	Styling
+ *	Transitions
+ *
+ */
 
-/*************************** Transitions ***************************/
-@import "transitions/_hoverTransition"
+
+//======== Inserting content ============\\
+@import "_delimiter";// Creates css delimiters for breadcrumbs,links, or else.
+
+
+//======== Objects ============\\
+@import "_overlay";// acepta background color y booleana sobre la transición
+
+
+//======== Positioning ============\\
+@import "_position";//XY positioning with translate.
+@import "_center";// XY o Y centering of an element. An improved version of the "position" mixin.
+
+
+//======== Responsive ============\\
+@import "_smallerThan";// @media mixin
+@import "_biggerThan";// @media mixin
+
+
+//======== Stylings ============\\
+@import "_bgCover";//Sets background cover
+@import "_aspectRatio";//Maintains aspect ratio of an div
+@import "_inputStyling";// Fully style an input with a single line
+
+
+//======== Transitions ============\\
+@import "transitions/_hoverTransition";

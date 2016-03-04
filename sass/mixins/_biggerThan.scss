@@ -1,0 +1,11 @@
+/**
+ * An "@media" mixin that responds to a bigger-than-given screen width.
+ *
+ * 
+ * @param  {string or var} $media Must be a unit not a number.
+ * 
+ * @return {@media block}    
+ */
+@mixin biggerThan($media) {
+		@media only screen and (min-width: $media) { @content; }
+}

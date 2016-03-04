@@ -8,17 +8,17 @@
 
 * Usar ese archivo para customizar estilos
 *
-* @version 2.0.0-0.0.0
+* @version 2.0.0-0.0.1
 */
 
 @charset "UTF-8";
 
-@import "reset";
-@import "_config"; 
-@import "_mixins";
-@import "_funciones";
-@import "_base";
-@import "_reticula";
+@import "ver.1/reset";
+@import "ver.1/_config"; 
+@import "ver.1/_mixins";
+@import "ver.1/_funciones";
+@import "ver.1/_base";
+@import "ver.1/_reticula";
 
 //OOCSS Framework
 @import "mixins/preConfigMixins/_preConfigMixins";
