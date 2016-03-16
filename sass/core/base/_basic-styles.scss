@@ -14,11 +14,8 @@
  */
 *{
 	@include border-sizing(border-box);
-	&::selection{ background: $colorFeatured; }
-	&::-moz-selection{background: $colorFeatured; }
 }
 
-html{font-size: $base-px;}
 
 html, body {height: 100%;}
 

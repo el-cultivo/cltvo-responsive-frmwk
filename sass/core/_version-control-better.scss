@@ -1,0 +1,26 @@
+@import "_core";
+
+@if map-get($core, version) !=  map-get($theme, core-version) {
+	@error  "
+	ERROR: 
+	WRONG VERSION OF THE THEME
+	Upsss, you are using the wrong version of the core. 
+	This theme was created using version #{map-get($core, version)} of the core. 
+	The version of your core is #{map-get($theme, core-version)}"
+}
+
+@if map-get($core, active-theme) == map-get($theme, theme-name) {
+	@error "
+	ERROR: 
+	WRONG ACTIVE THEME
+	The core you are using is not part of this theme. 
+	Please update the active theme field in core/_core.scss before proceeding.
+	
+	IMPORTANT: It is  very strongly suggested that you create a new branch on git, 
+	with your theme name before proceeding, this way you will not be modifing any 
+	other theme besides yours and you can be sure that any changes or additions to 
+	the core will not be breaking anything.
+		
+	Your actual theme name is: #{map-get($theme, theme-name)}.
+	The active theme of the core is #{map-get($core, active-theme)}"
+}
