@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "../_theme.scss";
+.probando {
+	content:'fin'
+}
+
+.algo {
+	color: yellow;
+}
+
+/**
+* _Blank
+* ---------------------
+*
+* Desarrollado por El Cultivo
+* http://elcultivo.mx
+*
+* Para desarrollar tu tema copia este folder y renómbralo con tu tema
+* 
+* 
+* Hecho con la version
+* @version #{map-get($theme, version)}
+* del Mazorca Sass de El Cultivo
+*
+* @author El Cultivo
+*/
+
+/*
+	Path to Core: "../../../core/"
+ */
+/// Version control (prevents theme interference and unsyncing between diferent versions of the core);
+@import "../../../core/_version-control";
+
+
+///**From the Core*///
+@import "../../../core/functions/_functions";
+@import "../../../core/mixins/preConfigMixins/_preConfigMixins";
+@import "../../../core/mixins/_mixins";//
+
+///**From our theme*///
+@import "config/_config";
+
+
+//Css begins compling here
+
+@import "../../../core/base/_base";
+@import "../../../core/helpers/_helpers";// 
+
+@import "_elements";
+@import "_grid";//
+@import "_modules";
+// @import "../../../core/debug/_debug";
+
+///Important note: Nixtamal is the testing ground for your theme, feel free to develop your modules in there.
+
+
+.contactForm {
+	.label {
+		background-color: blue;
+	}
+}
+
+

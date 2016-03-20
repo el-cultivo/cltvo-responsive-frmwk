@@ -1,26 +1,13 @@
 /*
-Error: 
-       ERROR: 
-       ATTEMPTING TO MODIFY _blank THEME 
-       The _blank theme is only to be used as a boilerplate. If you intend to you the 
-       contents of this theme please copy the folder and rename it with the name of your 
-       theme. 
-       
-       Do make sure to go to [your theme`s folder]/_theme.scss in the root of your 
-       new theme and update the theme-name field. 
-        
-       IMPORTANT: While you are at it, it is  very strongly 
-       suggested that you create a new branch on git with your 
-       theme name before proceeding, this way you will not be modifing 
-       any other theme besides yours and you can be sure that any 
-       changes or additions to  the core will not be breaking anything.
-        on line 10 of ../../core/_version-control.scss
+Error:  
+       ERROR:  
+       WRONG VERSION OF THE THEME 
+       Upsss, you are using the wrong version of the core.  
+       This theme was created using version 0 0.1 of the core.  
+       The version of your core is 
+        on line 14 of ../../core/_version-control.scss
         from line 24 of sass/mazorca.scss
 
-5: * Desarrollado por El Cultivo
-6: * http://elcultivo.mx
-7: *
-8: * Para desarrollar tu tema copia este folder y renómbralo con tu tema
 9: * 
 10: * 
 11: * Hecho con la version
@@ -28,9 +15,13 @@ Error:
 13: * del Mazorca Sass de El Cultivo
 14: *
 15: * @author El Cultivo
+16: *\/
+17: 
+18: /*
+19: 	Path to Core: "../../../core/"
 
 Backtrace:
-../../core/_version-control.scss:10
+../../core/_version-control.scss:14
 sass/mazorca.scss:24
 /Library/Ruby/Gems/1.8/gems/sass-3.4.18/bin/../lib/sass/tree/visitors/perform.rb:224:in `visit_error'
 /Library/Ruby/Gems/1.8/gems/sass-3.4.18/bin/../lib/sass/tree/visitors/base.rb:36:in `send'
@@ -116,4 +107,4 @@ sass/mazorca.scss:24
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: \A        ERROR: \A        ATTEMPTING TO MODIFY _blank THEME \A        The _blank theme is only to be used as a boilerplate. If you intend to you the \A        contents of this theme please copy the folder and rename it with the name of your \A        theme. \A        \A        Do make sure to go to [your theme`s folder]/_theme.scss in the root of your \A        new theme and update the theme-name field. \A         \A        IMPORTANT: While you are at it, it is  very strongly \A        suggested that you create a new branch on git with your \A        theme name before proceeding, this way you will not be modifing \A        any other theme besides yours and you can be sure that any \A        changes or additions to  the core will not be breaking anything.\A         on line 10 of ../../core/_version-control.scss\A         from line 24 of sass/mazorca.scss\A \A 5: * Desarrollado por El Cultivo\A 6: * http://elcultivo.mx\A 7: *\A 8: * Para desarrollar tu tema copia este folder y renómbralo con tu tema\A 9: * \A 10: * \A 11: * Hecho con la version\A 12: * @version 0.0.1\A 13: * del Mazorca Sass de El Cultivo\A 14: *\A 15: * @author El Cultivo"; }
+  content: "Error:  \A        ERROR:  \A        WRONG VERSION OF THE THEME \A        Upsss, you are using the wrong version of the core.  \A        This theme was created using version 0 0.1 of the core.  \A        The version of your core is \A         on line 14 of ../../core/_version-control.scss\A         from line 24 of sass/mazorca.scss\A \A 9: * \A 10: * \A 11: * Hecho con la version\A 12: * @version 0.0.1\A 13: * del Mazorca Sass de El Cultivo\A 14: *\A 15: * @author El Cultivo\A 16: */\A 17: \A 18: /*\A 19: 	Path to Core: \"../../../core/\""; }

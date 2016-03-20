@@ -89,4 +89,4 @@ select {
 
 //The weird stuff
 input:focus, select:focus, textarea:focus, button:focus { outline: none;}
-@include placeholder($placeholder_color){}
+@include placeholder($placeholder_color);
