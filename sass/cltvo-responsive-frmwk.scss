@@ -8,7 +8,7 @@
 
 * Usar ese archivo para customizar estilos
 *
-* @version 2.0.0-0.1.0
+* @version 2.0.0-0.1.1
 */
 
 @charset "UTF-8";
@@ -19,8 +19,9 @@
 
 	//Css begins compling here
 @import "_mixins";//
+@import '_components';
 @import "_base";
-@import "extras/_helpers";// 
+@import "extras/_helpers";//
 @import "_elements";
 @import "_grid";//
 @import "_modules";

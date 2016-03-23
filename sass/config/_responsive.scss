@@ -4,6 +4,9 @@
  * The responsive mixins (respond-to, biggerThan and smallerThan) accept either the map keys, 
  * strings and variables, so there is no need to reference the map keys in any special way.
  *
+ * Important: the name of the variable must not be changed as it is referenced in the responsive mixins.
+ *
+ * 
  * Example of their use in a mixin: 
  * 		@include respond-to(medio) {
  * 		   //Your code

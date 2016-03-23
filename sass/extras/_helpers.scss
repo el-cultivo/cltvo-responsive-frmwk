@@ -11,6 +11,7 @@
  *	Helpers Index:
  *		Position
  *		Display
+ *		Alignment
  *		Gutters
  *		Paddings and Margins
  *		JS Classes
@@ -47,6 +48,9 @@
 /*************************** Display ***************************/
 .d-bl 			{ display:block !important;}
 .inline		 	{ display: inline;}
+
+/*************************** Alignment ***************************/
+.tac {text-align: center;}
 
 /*************************** Gutters ***************************/
 .gutter-r 		{ padding-right: $pad/2 !important;	}
