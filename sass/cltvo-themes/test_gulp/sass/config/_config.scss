@@ -3,6 +3,10 @@
 /*
 * The various configuration files for the framework
 */
+
+
+//General variables,lists and maps. Do not overwrite!
+
 @import "_html-body";
 @import "_colors";//
 @import "_fonts";//
@@ -14,3 +18,9 @@
 
 //IMPORTANT: _base must appear after _widths
 @import "_base";//base, base-px, base-%
+
+/// Map to hold all the maps of the framework that might need to be accessed somehow, or printed to th console for easy consultation via the maps() mixin. It takes a key:value pair, where key is the name of the map and the value is the corresponding map.
+/// @example $maps:(breaks:$breaks, colors:$colors);
+/// @see {mixin} maps()
+/// @since 0.0.1;
+$maps: (breaks: $breaks);

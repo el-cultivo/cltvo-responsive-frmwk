@@ -1,6 +1,7 @@
 //_________________________ General Mixins _________________________ \\
 /**
  *	Mixins for:
+ *		Debugging/Printing Vars
  *		Inserting Content
  *		Objects
  *		Positioning
@@ -10,6 +11,8 @@
  *
  */
 
+//======== Debugging ========\\
+@import "_maps";//Prints into the console maps registered in the $maps variable.
 
 //======== Inserting content ========\\
 @import "_delimiter";// Creates css delimiters for breadcrumbs,links, or else.
