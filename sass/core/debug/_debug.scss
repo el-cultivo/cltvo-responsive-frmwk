@@ -5,8 +5,8 @@
  * To use, uncomment a line to activate debugging function or set a variable to true;
  * 
  */
-
+$debug: true;
 // @import "_borders";//Applies borders to each element
 // @import "_nestedBorders";// Applies different borders deepending on how deep are the elements being nested
 // @import "_nestedHoverBorders";//On hover, applies different borders deepending on how deep are the elements being nested
-// @import "_print-all-maps";//Registered in the $maps map, via mixin maps()
+@import "_print-all-maps";//Registered in the $maps map, via mixin maps()

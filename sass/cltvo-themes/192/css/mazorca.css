@@ -1,0 +1,1135 @@
+@charset "UTF-8";
+/*
+Theme Name: 192-theme
+Author: El Cultivo
+Author URI: http://elcultivo.mx
+Version: 0.0.1
+*/
+/**
+* 192
+* ---------------------
+*
+* Desarrollado por El Cultivo
+* http://elcultivo.mx
+*
+* Para desarrollar tu tema copia este folder y renómbralo con tu tema
+* 
+* 
+* Hecho con la version
+* @version 0.0.1
+* del Mazorca Sass de El Cultivo
+*
+* @author El Cultivo
+*/
+/*
+	Path to Core: "../../../core/"
+ */
+/**
+* FUNCTIONS
+* ---------
+* Agrega aquí tus funciones 
+* 
+*/
+/**
+* Cuánto debe medir cada columna (unidad) 
+*
+* @param number $cuantas-cols: numero total de columnas 
+* @return number porcentaje del ancho de columnas
+*
+* Se usa -1 por la primer columna a la que se le quita el margen izquierdo 
+*/
+/**
+* Se usa en el Loop para crear todos los tamaños de columnas ej. .grade-12.column
+*
+* @param number $num: numero de la columna que se especifica
+* @return number porcentaje del ancho de la columna que se especifica
+*
+*/
+/**
+* Cuánto debe medir cada cuadro (unidad)
+*
+* @param number $cuantas-cols: numero total de cuadros 
+* @return number porcentaje del ancho de cuadros
+*
+* No se le resta porque todos tienen margen derecho
+*/
+/**
+* Se usa en el Loop para crear todos los tamaños de cuadros ej. .grade-12.column
+*
+* @param number $num: numero de cuadro que se especifica  
+* @return number porcentaje del ancho del cuadro que se especifica
+*
+*/
+/**
+* Calcula los margenes de la class centered
+*
+* @param number $num: numero de columna 
+* @return number porcentaje del tamaño de la class centered
+*
+*/
+/**
+* Crea el estilo para crear los espacios a la izquierda
+*
+* @param number $num: numero de columna 
+* @param boolean $first-child trigger agrenga un el margen de la ultima columna al caso seleccionado Por defecto false.
+* @return number porcentaje del tamaño empujar columnas 
+*
+*/
+/**
+* Generador de tamaños en función de la base 
+*
+* @param number $ratio: el número de veces que quieres multiplicar la base
+* @return number pixeles de referencia  
+*
+*/
+/**
+* Regresa el valor sin unidades
+*
+* @param number $num: valor a que se le quieran quitar las unidades 
+* @return number valor sin unidades 
+*
+*/
+/**
+* Crea el nombre de las class de las columnas 
+*
+* @param number $number: numero de columna 
+* @return string regresa las clases
+*
+*/
+/*
+* Mixins that should go before the "config/_config" file
+ */
+/**
+ *	Mixins Index:
+ *		Inserting Content
+ *		Objects
+ *		Positioning
+ *		Responsive
+ *		Styling
+ *		Transitions
+ *
+ */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ *
+ *@author 	Nicolas Gallagher
+ *@url 		http://nicolasgallagher.com/micro-clearfix-hack/
+ * 
+ */
+/**
+* MIXINS
+* ------
+* Agrega aquí tus mixins
+* 
+*/
+/**
+*  Especificar la fuentes personalizada para el diseño de la pagina
+*	
+*  @param string $font-family: nombre de la fuente
+*  @param string $font-filename: nombre del origen (archivo) que contiene la fuente
+*  @param string|number $font-weight: alto de la fuente. 
+*  @param string $font-style: estilo de la fuente. 
+*  @param string $font-stretch: anchura de la fuente. 
+*/
+/**
+*  imagen de fondo
+* 
+* @param string $file: nombre del origen (archivo) de la imagen
+* @param string $type: formato (extensión) de la imagen
+* @param number $width: Ancho de la imagen
+* @param number $height: Alto de la imagen
+*/
+/**
+* MIXINS LOCALES
+* ------
+* Agrega aquí tus mixins locales
+* 
+*/
+/**
+*  filtro para mostrar la imagen dentro de los límites fondo
+* 
+* @param string $file: nombre del origen (archivo) de la imagen
+* @param string $type: formato (extensión) de la imagen
+* @param number $width: Ancho de la imagen
+* @param number $height: Alto de la imagen
+*/
+/**
+ * Set to true for -webkit-,-moz-appereance:none useful for editing radio buttons among other things
+ * @param  {boolean} $boolean 
+ * @return {property}      
+ */
+/**
+ * Creates an @media block with the corresponding content.
+ *
+ * Used to generate the breaks in the fluid grid.
+ * 
+ * @param  {map || map key || string} $break   Map with the names of breaks and their units or only the desired unit or the Map key.
+ * @return {@media}      
+ */
+/**
+ *	Mixins for:
+ *		Debugging/Printing Vars
+ *		Inserting Content
+ *		Objects
+ *		Positioning
+ *		Responsive
+ *		Styling
+ *		Transitions
+ *
+ */
+/*
+* Creates css delimiters for breadcrumbs,
+* links, or else.
+*
+* $delimiter	symbol
+* 
+*/
+/*
+* Position elements within a container: 
+* e.g.: position(50%, 50%) will place 
+* the element at the center of 
+* the container
+* 
+* Note: It is necessary to add position:relative 
+* to the parent container
+* 
+*/
+/**
+ * Absolutetly centers an element inside another that contains it.
+ * Element will be centered either "vertically and horizontally", or only "vertically".
+ *
+ * Note that container element must have a position property different thatn "static".
+ *
+ * @param  {string} $XYorY 	String must be either 'xy' or 'y'. Else an error will be thrown.
+ *
+ * @return {css properties}     
+ */
+/**
+ * An "@media" mixin that responds to a smaller-than-given screen width.
+ *
+ * 
+ * @param  {map || map key || string} $break   Map with the names of breaks and their units or only the desired unit or the Map key.
+ * 
+ * @return {@media block}    
+ */
+/**
+ * An "@media" mixin that responds to a bigger-than-given screen width.
+ *
+ * Same as the respond-to mixin.
+ * 
+ * @param  {map || map key || string} $break   Map with the names of breaks and their units or only the desired unit or the Map key.
+ * 
+ * @return {@media block}    
+ */
+/*
+* Mixin for (almost completely) styling an input
+*
+*/
+/**
+* Base Styles 
+* ---------------
+* Edítalos o sobreescríbelos
+* 
+*/
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600,500,700);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Super basic stylings
+ * 
+ */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+strong {
+  font-weight: bold; }
+
+img {
+  -ms-interpolation-mode: bicubic; }
+
+.column img, .columns img {
+  max-width: 100%; }
+
+p em {
+  font-style: italic; }
+
+body, html {
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */ }
+  body:before, body:after, html:before, html:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  body:after, html:after {
+    clear: both; }
+  body, html {
+    *zoom: 1; }
+
+/**
+ * Declare fonts using the Mixin
+ */
+@font-face {
+  font-family: "SharpSans";
+  src: url("fonts/SharpSansNoOne-Bold.eot");
+  src: url("fonts/SharpSansNoOne-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSansNoOne-Bold.woff") format("woff"), url("fonts/SharpSansNoOne-Bold.ttf") format("truetype"), url("fonts/SharpSansNoOne-Bold.svg#fonts/SharpSansNoOne-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "SharpSans";
+  src: url("fonts/SharpSansNoOne-SemiBold.eot");
+  src: url("fonts/SharpSansNoOne-SemiBold.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSansNoOne-SemiBold.woff") format("woff"), url("fonts/SharpSansNoOne-SemiBold.ttf") format("truetype"), url("fonts/SharpSansNoOne-SemiBold.svg#fonts/SharpSansNoOne-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: "SharpSans";
+  src: url("fonts/SharpSansNoOne-Medium.eot");
+  src: url("fonts/SharpSansNoOne-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/SharpSansNoOne-Medium.woff") format("woff"), url("fonts/SharpSansNoOne-Medium.ttf") format("truetype"), url("fonts/SharpSansNoOne-Medium.svg#fonts/SharpSansNoOne-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal; }
+
+/*
+*   The Variables
+*   Feel free to play with them!
+*/
+/*Set to "true" for -webkit-,-moz-appereance:none 
+                            useful for editing radio buttons amog other things*/
+/*similar as above but for selects*/
+/*  
+*   If you need to style basic layout and stuff go to your 
+*   "modules/_contactForm.scss" or similar file
+*/
+/*Input Elements' Params*/
+input, textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: initial;
+  padding: 0 .5em; }
+
+input, textarea {
+  width: 100%; }
+
+textarea {
+  resize: vertical; }
+
+input[type="submit"],
+input[type="button"] {
+  background-color: black;
+  display: block; }
+
+input[type="date"],
+input[type="time"],
+input[type="submit"],
+input[type="button"] {
+  width: auto; }
+
+input::-webkit-datetime-edit {
+  color: black; }
+
+input::-webkit-inner-spin-button,
+input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  padding: 0;
+  height: 1rem;
+  width: 1rem;
+  vertical-align: text-top; }
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: black; }
+
+input[type="radio"] {
+  border-radius: 100%; }
+
+select {
+  cursor: pointer; }
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none; }
+
+::-webkit-input-placeholder {
+  color: darkgrey; }
+
+:-moz-placeholder {
+  color: darkgrey; }
+
+/* Firefox 18- */
+::-moz-placeholder {
+  color: darkgrey; }
+
+/* Firefox 19+ */
+:-ms-input-placeholder {
+  color: darkgrey; }
+
+/**
+ * Grid configuration file
+ *
+ * For setting up the responsive breakpoints go to "config/_responsive".
+ *
+ * 
+ */
+/**
+ * All helpers use the !important keyword, if ever necessary their 
+ * output might be overriden with the !important keyword in a 
+ * property located lower in the cascade.
+ * 
+ */
+/**
+ *	Helpers Index:
+ *		Position
+ *		Display
+ *		Gutters
+ *		Paddings and Margins
+ *		JS Classes
+ * 
+ */
+/*************************** Position ***************************/
+.absolute {
+  position: absolute !important; }
+
+.relative {
+  position: relative !important; }
+
+.fixed {
+  position: fixed !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  left: 0; }
+
+@media only screen and (min-width: medio) {
+  .fixed-desktop {
+    position: fixed !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    left: 0; } }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.top {
+  top: 0 !important; }
+
+.top56 {
+  top: 56px; }
+
+.ontop {
+  z-index: 99 !important; }
+
+.z-0 {
+  z-index: 0 !important; }
+
+/*************************** Layout ***************************/
+.clearfix {
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */ }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .clearfix:after {
+    clear: both; }
+  .clearfix {
+    *zoom: 1; }
+
+/*************************** Display ***************************/
+.d-bl {
+  display: block !important; }
+
+.inline {
+  display: inline; }
+
+/*************************** Gutters ***************************/
+.gutter-r {
+  padding-right: 10px !important; }
+
+.gutter-l {
+  padding-left: 10px !important; }
+
+.gutter-rl {
+  padding: 0 10px !important; }
+
+/*************************** Paddings and Margins ***************************/
+.p0 {
+  padding: 0 !important; }
+
+.m0 {
+  margin: 0 !important; }
+
+.mb0 {
+  margin-bottom: 0 !important; }
+
+/*************************** JS Classes ***************************/
+.noScroll_JS {
+  overflow: hidden !important; }
+
+/**
+ * Scripts for debugging, 
+ * 
+ * To use, uncomment a line to activate debugging function or set a variable to true;
+ * 
+ */
+.divisor {
+  border-bottom: 1px solid black;
+  margin-bottom: 40px; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */ }
+  .container:before, .container:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .container:after {
+    clear: both; }
+  .container {
+    *zoom: 1; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */ }
+  .container-fluid:before, .container-fluid:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .container-fluid:after {
+    clear: both; }
+  .container-fluid {
+    *zoom: 1; }
+
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */ }
+  .row:before, .row:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .row:after {
+    clear: both; }
+  .row {
+    *zoom: 1; }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
+
+.col-xs-1 {
+  width: 8.33333%; }
+
+.col-xs-2 {
+  width: 16.66667%; }
+
+.col-xs-3 {
+  width: 25%; }
+
+.col-xs-4 {
+  width: 33.33333%; }
+
+.col-xs-5 {
+  width: 41.66667%; }
+
+.col-xs-6 {
+  width: 50%; }
+
+.col-xs-7 {
+  width: 58.33333%; }
+
+.col-xs-8 {
+  width: 66.66667%; }
+
+.col-xs-9 {
+  width: 75%; }
+
+.col-xs-10 {
+  width: 83.33333%; }
+
+.col-xs-11 {
+  width: 91.66667%; }
+
+.col-xs-12 {
+  width: 100%; }
+
+.col-xs-pull-0 {
+  right: auto; }
+
+.col-xs-pull-1 {
+  right: 8.33333%; }
+
+.col-xs-pull-2 {
+  right: 16.66667%; }
+
+.col-xs-pull-3 {
+  right: 25%; }
+
+.col-xs-pull-4 {
+  right: 33.33333%; }
+
+.col-xs-pull-5 {
+  right: 41.66667%; }
+
+.col-xs-pull-6 {
+  right: 50%; }
+
+.col-xs-pull-7 {
+  right: 58.33333%; }
+
+.col-xs-pull-8 {
+  right: 66.66667%; }
+
+.col-xs-pull-9 {
+  right: 75%; }
+
+.col-xs-pull-10 {
+  right: 83.33333%; }
+
+.col-xs-pull-11 {
+  right: 91.66667%; }
+
+.col-xs-pull-12 {
+  right: 100%; }
+
+.col-xs-push-0 {
+  left: auto; }
+
+.col-xs-push-1 {
+  left: 8.33333%; }
+
+.col-xs-push-2 {
+  left: 16.66667%; }
+
+.col-xs-push-3 {
+  left: 25%; }
+
+.col-xs-push-4 {
+  left: 33.33333%; }
+
+.col-xs-push-5 {
+  left: 41.66667%; }
+
+.col-xs-push-6 {
+  left: 50%; }
+
+.col-xs-push-7 {
+  left: 58.33333%; }
+
+.col-xs-push-8 {
+  left: 66.66667%; }
+
+.col-xs-push-9 {
+  left: 75%; }
+
+.col-xs-push-10 {
+  left: 83.33333%; }
+
+.col-xs-push-11 {
+  left: 91.66667%; }
+
+.col-xs-push-12 {
+  left: 100%; }
+
+.col-xs-offset-0 {
+  margin-left: 0%; }
+
+.col-xs-offset-1 {
+  margin-left: 8.33333%; }
+
+.col-xs-offset-2 {
+  margin-left: 16.66667%; }
+
+.col-xs-offset-3 {
+  margin-left: 25%; }
+
+.col-xs-offset-4 {
+  margin-left: 33.33333%; }
+
+.col-xs-offset-5 {
+  margin-left: 41.66667%; }
+
+.col-xs-offset-6 {
+  margin-left: 50%; }
+
+.col-xs-offset-7 {
+  margin-left: 58.33333%; }
+
+.col-xs-offset-8 {
+  margin-left: 66.66667%; }
+
+.col-xs-offset-9 {
+  margin-left: 75%; }
+
+.col-xs-offset-10 {
+  margin-left: 83.33333%; }
+
+.col-xs-offset-11 {
+  margin-left: 91.66667%; }
+
+.col-xs-offset-12 {
+  margin-left: 100%; }
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
+  .col-sm-1 {
+    width: 8.33333%; }
+  .col-sm-2 {
+    width: 16.66667%; }
+  .col-sm-3 {
+    width: 25%; }
+  .col-sm-4 {
+    width: 33.33333%; }
+  .col-sm-5 {
+    width: 41.66667%; }
+  .col-sm-6 {
+    width: 50%; }
+  .col-sm-7 {
+    width: 58.33333%; }
+  .col-sm-8 {
+    width: 66.66667%; }
+  .col-sm-9 {
+    width: 75%; }
+  .col-sm-10 {
+    width: 83.33333%; }
+  .col-sm-11 {
+    width: 91.66667%; }
+  .col-sm-12 {
+    width: 100%; }
+  .col-sm-pull-0 {
+    right: auto; }
+  .col-sm-pull-1 {
+    right: 8.33333%; }
+  .col-sm-pull-2 {
+    right: 16.66667%; }
+  .col-sm-pull-3 {
+    right: 25%; }
+  .col-sm-pull-4 {
+    right: 33.33333%; }
+  .col-sm-pull-5 {
+    right: 41.66667%; }
+  .col-sm-pull-6 {
+    right: 50%; }
+  .col-sm-pull-7 {
+    right: 58.33333%; }
+  .col-sm-pull-8 {
+    right: 66.66667%; }
+  .col-sm-pull-9 {
+    right: 75%; }
+  .col-sm-pull-10 {
+    right: 83.33333%; }
+  .col-sm-pull-11 {
+    right: 91.66667%; }
+  .col-sm-pull-12 {
+    right: 100%; }
+  .col-sm-push-0 {
+    left: auto; }
+  .col-sm-push-1 {
+    left: 8.33333%; }
+  .col-sm-push-2 {
+    left: 16.66667%; }
+  .col-sm-push-3 {
+    left: 25%; }
+  .col-sm-push-4 {
+    left: 33.33333%; }
+  .col-sm-push-5 {
+    left: 41.66667%; }
+  .col-sm-push-6 {
+    left: 50%; }
+  .col-sm-push-7 {
+    left: 58.33333%; }
+  .col-sm-push-8 {
+    left: 66.66667%; }
+  .col-sm-push-9 {
+    left: 75%; }
+  .col-sm-push-10 {
+    left: 83.33333%; }
+  .col-sm-push-11 {
+    left: 91.66667%; }
+  .col-sm-push-12 {
+    left: 100%; }
+  .col-sm-offset-0 {
+    margin-left: 0%; }
+  .col-sm-offset-1 {
+    margin-left: 8.33333%; }
+  .col-sm-offset-2 {
+    margin-left: 16.66667%; }
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+  .col-sm-offset-4 {
+    margin-left: 33.33333%; }
+  .col-sm-offset-5 {
+    margin-left: 41.66667%; }
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+  .col-sm-offset-7 {
+    margin-left: 58.33333%; }
+  .col-sm-offset-8 {
+    margin-left: 66.66667%; }
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+  .col-sm-offset-10 {
+    margin-left: 83.33333%; }
+  .col-sm-offset-11 {
+    margin-left: 91.66667%; }
+  .col-sm-offset-12 {
+    margin-left: 100%; } }
+
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left; }
+  .col-md-1 {
+    width: 8.33333%; }
+  .col-md-2 {
+    width: 16.66667%; }
+  .col-md-3 {
+    width: 25%; }
+  .col-md-4 {
+    width: 33.33333%; }
+  .col-md-5 {
+    width: 41.66667%; }
+  .col-md-6 {
+    width: 50%; }
+  .col-md-7 {
+    width: 58.33333%; }
+  .col-md-8 {
+    width: 66.66667%; }
+  .col-md-9 {
+    width: 75%; }
+  .col-md-10 {
+    width: 83.33333%; }
+  .col-md-11 {
+    width: 91.66667%; }
+  .col-md-12 {
+    width: 100%; }
+  .col-md-pull-0 {
+    right: auto; }
+  .col-md-pull-1 {
+    right: 8.33333%; }
+  .col-md-pull-2 {
+    right: 16.66667%; }
+  .col-md-pull-3 {
+    right: 25%; }
+  .col-md-pull-4 {
+    right: 33.33333%; }
+  .col-md-pull-5 {
+    right: 41.66667%; }
+  .col-md-pull-6 {
+    right: 50%; }
+  .col-md-pull-7 {
+    right: 58.33333%; }
+  .col-md-pull-8 {
+    right: 66.66667%; }
+  .col-md-pull-9 {
+    right: 75%; }
+  .col-md-pull-10 {
+    right: 83.33333%; }
+  .col-md-pull-11 {
+    right: 91.66667%; }
+  .col-md-pull-12 {
+    right: 100%; }
+  .col-md-push-0 {
+    left: auto; }
+  .col-md-push-1 {
+    left: 8.33333%; }
+  .col-md-push-2 {
+    left: 16.66667%; }
+  .col-md-push-3 {
+    left: 25%; }
+  .col-md-push-4 {
+    left: 33.33333%; }
+  .col-md-push-5 {
+    left: 41.66667%; }
+  .col-md-push-6 {
+    left: 50%; }
+  .col-md-push-7 {
+    left: 58.33333%; }
+  .col-md-push-8 {
+    left: 66.66667%; }
+  .col-md-push-9 {
+    left: 75%; }
+  .col-md-push-10 {
+    left: 83.33333%; }
+  .col-md-push-11 {
+    left: 91.66667%; }
+  .col-md-push-12 {
+    left: 100%; }
+  .col-md-offset-0 {
+    margin-left: 0%; }
+  .col-md-offset-1 {
+    margin-left: 8.33333%; }
+  .col-md-offset-2 {
+    margin-left: 16.66667%; }
+  .col-md-offset-3 {
+    margin-left: 25%; }
+  .col-md-offset-4 {
+    margin-left: 33.33333%; }
+  .col-md-offset-5 {
+    margin-left: 41.66667%; }
+  .col-md-offset-6 {
+    margin-left: 50%; }
+  .col-md-offset-7 {
+    margin-left: 58.33333%; }
+  .col-md-offset-8 {
+    margin-left: 66.66667%; }
+  .col-md-offset-9 {
+    margin-left: 75%; }
+  .col-md-offset-10 {
+    margin-left: 83.33333%; }
+  .col-md-offset-11 {
+    margin-left: 91.66667%; }
+  .col-md-offset-12 {
+    margin-left: 100%; } }
+
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left; }
+  .col-lg-1 {
+    width: 8.33333%; }
+  .col-lg-2 {
+    width: 16.66667%; }
+  .col-lg-3 {
+    width: 25%; }
+  .col-lg-4 {
+    width: 33.33333%; }
+  .col-lg-5 {
+    width: 41.66667%; }
+  .col-lg-6 {
+    width: 50%; }
+  .col-lg-7 {
+    width: 58.33333%; }
+  .col-lg-8 {
+    width: 66.66667%; }
+  .col-lg-9 {
+    width: 75%; }
+  .col-lg-10 {
+    width: 83.33333%; }
+  .col-lg-11 {
+    width: 91.66667%; }
+  .col-lg-12 {
+    width: 100%; }
+  .col-lg-pull-0 {
+    right: auto; }
+  .col-lg-pull-1 {
+    right: 8.33333%; }
+  .col-lg-pull-2 {
+    right: 16.66667%; }
+  .col-lg-pull-3 {
+    right: 25%; }
+  .col-lg-pull-4 {
+    right: 33.33333%; }
+  .col-lg-pull-5 {
+    right: 41.66667%; }
+  .col-lg-pull-6 {
+    right: 50%; }
+  .col-lg-pull-7 {
+    right: 58.33333%; }
+  .col-lg-pull-8 {
+    right: 66.66667%; }
+  .col-lg-pull-9 {
+    right: 75%; }
+  .col-lg-pull-10 {
+    right: 83.33333%; }
+  .col-lg-pull-11 {
+    right: 91.66667%; }
+  .col-lg-pull-12 {
+    right: 100%; }
+  .col-lg-push-0 {
+    left: auto; }
+  .col-lg-push-1 {
+    left: 8.33333%; }
+  .col-lg-push-2 {
+    left: 16.66667%; }
+  .col-lg-push-3 {
+    left: 25%; }
+  .col-lg-push-4 {
+    left: 33.33333%; }
+  .col-lg-push-5 {
+    left: 41.66667%; }
+  .col-lg-push-6 {
+    left: 50%; }
+  .col-lg-push-7 {
+    left: 58.33333%; }
+  .col-lg-push-8 {
+    left: 66.66667%; }
+  .col-lg-push-9 {
+    left: 75%; }
+  .col-lg-push-10 {
+    left: 83.33333%; }
+  .col-lg-push-11 {
+    left: 91.66667%; }
+  .col-lg-push-12 {
+    left: 100%; }
+  .col-lg-offset-0 {
+    margin-left: 0%; }
+  .col-lg-offset-1 {
+    margin-left: 8.33333%; }
+  .col-lg-offset-2 {
+    margin-left: 16.66667%; }
+  .col-lg-offset-3 {
+    margin-left: 25%; }
+  .col-lg-offset-4 {
+    margin-left: 33.33333%; }
+  .col-lg-offset-5 {
+    margin-left: 41.66667%; }
+  .col-lg-offset-6 {
+    margin-left: 50%; }
+  .col-lg-offset-7 {
+    margin-left: 58.33333%; }
+  .col-lg-offset-8 {
+    margin-left: 66.66667%; }
+  .col-lg-offset-9 {
+    margin-left: 75%; }
+  .col-lg-offset-10 {
+    margin-left: 83.33333%; }
+  .col-lg-offset-11 {
+    margin-left: 91.66667%; }
+  .col-lg-offset-12 {
+    margin-left: 100%; } }
+
+.container {
+  margin: 0;
+  width: 100%; }
+
+.home {
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
+  min-height: 100%; }
+  .home:before, .home:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .home:after {
+    clear: both; }
+  .home {
+    *zoom: 1; }
+  .home .body-gradient {
+    /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
+    background: #fff;
+    background: linear-gradient(to bottom, #fff 0%, #d0c7de 40%);
+    height: 100%;
+    padding: 20px; }
+    .home .body-gradient:before, .home .body-gradient:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    .home .body-gradient:after {
+      clear: both; }
+    .home .body-gradient {
+      *zoom: 1; }
+  .home .main-background {
+    background-color: #fff; }
+  .home .header {
+    height: 242px; }
+  .home .header-container {
+    padding-bottom: 40px; }
+  .home .content {
+    margin-bottom: 90px;
+    padding-left: 30px;
+    padding-right: 30px; }
+
+.home .header {
+  background-color: #ddf6fb; }
+
+.col-md-3, .col-md-6, .col-xs-12 {
+  background-color: #bbd3ca;
+  height: 500px; }
+
+/*# sourceMappingURL=mazorca.css.map */

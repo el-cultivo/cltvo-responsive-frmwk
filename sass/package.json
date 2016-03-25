@@ -1,6 +1,6 @@
 {
-  "name": "wp-content",
-  "version": "1.0.0",
+  "name": "mazorca",
+  "version": "0.0.1",
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {

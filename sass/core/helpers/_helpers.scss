@@ -29,7 +29,7 @@
 					left:0;
 				}
 
-.fixed-desktop 	{	@include biggerThan(medio) { 
+.fixed-desktop 	{	@include over(medio) { 
 						position:fixed !important;
 					 	max-width: 100% !important;
 					 	width: 100% !important;
@@ -37,26 +37,31 @@
 					} 
 				}
 
-.left 			{float:left !important;}
-.right 			{float:right !important;}
-.top 			{top:0 !important;}
+.left 			{ float:left !important;}
+.right 			{ float:right !important;}
+.top 			{ top:0 !important;}
 .top56 			{ top:56px; }
 .ontop 			{ z-index:99 !important;}
 .z-0 			{ z-index: 0 !important;}
 
+/*************************** Layout ***************************/
+.clearfix {@include clearfix;}
 /*************************** Display ***************************/
 .d-bl 			{ display:block !important;}
 .inline		 	{ display: inline;}
 
 /*************************** Gutters ***************************/
-.gutter-r 		{ padding-right: $pad/2 !important;	}
-.gutter-l 		{ padding-left: $pad/2 !important;	}
-.gutter-rl 		{ padding: 0 $pad/2 !important;	}
+@if function-exists(s) and type-of($pads) == 'map' {
+
+.gutter-r 		{ padding-right: s(1/2, pr) !important;	}
+.gutter-l 		{ padding-left: s(1/2, pl) !important;	}
+.gutter-rl 		{ padding: 0 s(1/2) !important;	}
+
+}
 
 
 /*************************** Paddings and Margins ***************************/
 .p0 			{ padding: 0 !important;}
-.pt 			{ padding-top: 26px;}
 .m0 			{ margin:0 !important;}
 .mb0			{ margin-bottom: 0 !important;}
 

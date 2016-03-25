@@ -1,0 +1,22 @@
+//_________________________ Modules _________________________ \\
+
+
+//--------------------- Generales ---------------------
+
+@import "modules/general/_footer";//
+@import "modules/general/_home";//
+@import "modules/general/_moda";//
+
+//--------------------- Medias ---------------------
+
+//@include mediaMixin(.mediaMain);// en _components.scss
+//@include mediaMixin(.mediaModal);// en _components.scss
+
+
+//--------------------- Menus ---------------------
+
+@import "modules/menus/_menuMain";
+
+//--------------------- Single ---------------------
+
+

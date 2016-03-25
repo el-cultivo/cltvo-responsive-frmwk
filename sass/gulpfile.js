@@ -1,4 +1,5 @@
-var active_theme = 'test_gulp';
+var active_theme = '192';
+var path_to_proyect = '../../../../' + active_theme + '/wp-content/themes/' + active_theme + '-theme';
 /**
  * Required modules
  * @type {[]}
@@ -12,6 +13,7 @@ var sourcemaps = require('gulp-sourcemaps'); //sass sourcemaps
 var autoprefixer = require('gulp-autoprefixer');
 var sassdoc = require('sassdoc');
 var watch = require('gulp-watch');
+var rename = require("gulp-rename");
 
 
 /**
@@ -31,6 +33,12 @@ var sassdocOptions = {
 };
 
 
+function swallowError (error) {
+  // If you want details of the error in the console
+  console.log(error.toString());
+  this.emit('end');
+}
+
 
 gulp.task('hello', function() {
   console.log(gulp.src);
@@ -40,13 +48,16 @@ gulp.task('sass', function(){
   return gulp.src('cltvo-themes/'+ active_theme +'/sass/mazorca.scss')
     .pipe(sourcemaps.init())
     .pipe(sass()) // Using gulp-sass
+    .on('error', swallowError)
     .pipe(autoprefixer({
       browsers: ['last 3 versions'],
       cascade: false
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('cltvo-themes/'+ active_theme +'/css/'))
-    .pipe(livereload());
+    .pipe(rename({basename: "style"}))
+    .pipe(gulp.dest(path_to_proyect+'/'))
+    // .pipe(livereload());
     // .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -102,7 +113,7 @@ gulp.task('copyfonts', function() {
 
 gulp.task('watch', [/*'browser-sync',*/ 'sass', 'sass-nixt'], function() {
   livereload.listen({ start: true, port:8888, host:'localhost' });
-  console.log(livereload.server);
+  // console.log(livereload.server);
   gulp.watch('./cltvo-themes/'+ active_theme +'/sass/**/*.scss', ['sass']); 
   gulp.watch('./cltvo-themes/'+ active_theme +'/nixtamal/**/*.scss', ['sass-nixt']); 
   // gulp.watch('*.js', ['scripts']); 

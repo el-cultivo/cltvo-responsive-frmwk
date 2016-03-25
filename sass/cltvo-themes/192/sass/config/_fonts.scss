@@ -1,0 +1,34 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+
+//Playfair display 400
+//'SharpSansNoOne-Bold'
+//'SharpSansNoOne-Medium'
+//'SharpSansNoOne-SemiBold'
+
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Raleway:600,500,700);//Provisional ante Sharp Sans
+
+@include declara-font-face(SharpSans, 'fonts/SharpSansNoOne-Bold', bold);
+@include declara-font-face(SharpSans, 'fonts/SharpSansNoOne-SemiBold', 600);
+@include declara-font-face(SharpSans, 'fonts/SharpSansNoOne-Medium', 500);
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+///
+///
+$fonts:( sans:	('SharpSans', sans-serif),
+		serif: 	('Playfair Display', serif)
+	);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}
+
+
+
+

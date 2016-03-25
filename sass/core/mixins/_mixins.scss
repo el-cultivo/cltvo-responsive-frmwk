@@ -28,12 +28,13 @@
 
 
 //======== Responsive ========\\
-@import "_smallerThan";// @media mixin
-@import "_biggerThan";// @media mixin
+@import "_under";// @media mixin
+@import "_over";// @media mixin
 
 
 //======== Stylings ========\\
 @import "_bgCover";//Sets background cover
+@import "_bg-gradient";//creates top-bottom gradients
 @import "_aspectRatio";//Maintains aspect ratio of an div
 @import "_inputStyling";// Fully style an input with a single line
 
